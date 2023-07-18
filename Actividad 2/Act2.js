@@ -12,3 +12,4 @@ res = num * num2;
 console.log(res)
 res = num / num2;
 console.log(res);
+document.write(res); //Visualizar en el documento HTML(Boddy)
