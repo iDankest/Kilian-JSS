@@ -1,9 +1,10 @@
+//1
 var n = parseInt(prompt("n tabla"))
 for(i=1; i<=10; i++){
     document.write(i+" x "+n+" = "+i*n + "<br/>");
 
 }
-
+//2
 for(i=1; i<=10; i++){
     document.write("La tabla del "+i+ "<br/>");
 
@@ -12,7 +13,7 @@ for(i=1; i<=10; i++){
     }
 
 }
-
+// 3 
 do {
     var r = parseInt(prompt("Hasta qué tabla quieres que te cuente?"));
     for(i=1; i<=r; i++){
