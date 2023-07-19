@@ -29,7 +29,7 @@
 var age = parseInt(prompt("¿Que edad Tienes?"));
 var inicio = prompt("Si o no quieres comprobar tu status");
 inicio = inicio.toUpperCase();
-if (inicio == "SI") {
+if (inicio === "SI") {
     
 
 
