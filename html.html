@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comprobar Operadores</title>
+</head>
+<body>
+  <h1>Comprobar Operadores</h1>
+  <p>Ingrese un operador en formato cadena (ejemplo: "25 + 25"):</p>
+  <input type="text" id="operador">
+  <button onclick="comprobarOperador()">Comprobar</button>
+
+  <script>
+    function comprobarOperador() {
+      const operadorInput = document.getElementById('operador').value;
+      try {
+        const resultado = eval(operadorInput);
+        alert('El resultado es: ' + resultado);
+      } catch (error) {
+        alert('Error al evaluar el operador. Asegúrese de que el formato sea válido.');
+      }
+    }
+  </script>
+</body>
+</html>
