@@ -1,19 +1,19 @@
-function Act2(num, num2, res=0){
-
-    num = parseInt(prompt("Introduce el primer numero"));
-    document.write("El numero introducido  es "+num+ "<br/>");
-    num2 = parseInt(prompt("Introduce el segundo numero"));
-    document.write("El segundo numero es "+num2+"<br/>");
-    res = num + num2;
-    document.write("El resulado de la suma de "+num+" y "+num2+" es "+res+ "<br/>");
-    res = num - num2;
-    document.write("El resulado de la resta de "+num+" y "+num2+" es "+res+ "<br/>");
-    res = num * num2;
-    document.write("El resulado de la multiplicacion de "+num+" y "+num2+" es "+res+ "<br/>");
-    res = num / num2;
-    document.write("El resulado de la division de "+num+" y "+num2+" es "+res+ "<br/>");
-    // document.write(res); //Visualizar en el documento HTML(Boddy)
-}
+// function Act2(num, num2, res=0){
+//     let miarry = [];
+//     num = parseInt(prompt("Introduce el primer numero"));
+//     miarry.push("El numero introducido  es "+num);
+//     num2 = parseInt(prompt("Introduce el segundo numero"));
+//     miarry.push("El segundo numero es "+num2);
+//     res = num + num2;
+//     miarry.push("El resulado de la suma de "+num+" y "+num2+" es "+res);
+//     res = num - num2;
+//     miarry.push("El resulado de la resta de "+num+" y "+num2+" es "+res);
+//     res = num * num2;
+//     miarry.push("El resulado de la multiplicacion de "+num+" y "+num2+" es "+res);
+//     res = num / num2;
+//     miarry.push("El resulado de la division de "+num+" y "+num2);
+//     document.getElementById("sumita").innerHTML =miarry.join();
+// }
 
 function act3(nume, nume2){
 nume = parseInt(prompt("Introduce el primer numero"));
@@ -77,35 +77,46 @@ function inicio(clave){
       }
     }
 
-    function tabla() {
-        //1
-var n = parseInt(prompt("n tabla"))
-for(i=1; i<=10; i++){
-    document.write(i+" x "+n+" = "+i*n + "<br/>");
+//     function tabla() {
+//         var resultados = [];
+//         //1
+// var n = parseInt(prompt("n tabla"))
+// for(i=1; i<=10; i++){
+//     resultados.push(i+" x "+n+" = "+i*n + "<br/>");
 
-}
-//2
-for(i=1; i<=10; i++){
-    document.write("La tabla del "+i+ "<br/>");
+// }
+// //2
+// for(i=1; i<=10; i++){
+//     resultados.push("La tabla del "+i+ "<br/>");
 
-    for(j=1; j<=10; j++){
-        document.write(i+" x "+j+" = "+i*j+"<br/>")
-    }
+//     for(j=1; j<=10; j++){
+//         resultados.push(i+" x "+j+" = "+i*j+"<br/>")
+//     }
 
-}
-// 3 
-do {
-    var r = parseInt(prompt("Hasta qué tabla quieres que te cuente?"));
-    for(i=1; i<=r; i++){
-        document.write("La tabla del "+i+ "<br/>");
+// }
+// // 3 
+// var t =0;
+// do {
+//     var r = parseInt(prompt("Hasta qué tabla quieres que te cuente?"));
+//     for(i=1; i<=r; i++){
+//         resultados.push("La tabla del "+i+ "<br/>");
     
-        for(j=1; j<=10; j++){
-            document.write(i+" x "+j+" = "+i*j+"<br/>");
-        }
-    }
-} while (t>=r);
+//         for(j=1; j<=10; j++){
+//             resultados.push(i+" x "+j+" = "+i*j+"<br/>");
+//         }
+//     }
+//     t++
+// } while (t>=r);
 
-    }
+// // return resultados;
+// // var misResultados = tabla();
+
+// // var resultadosHTML = misResultados.join("<br/>")
+
+
+// // document.getElementById("resss2").innerHTML = resultadosHTML;
+    // }
+
 
 function meses() {
     var impor = parseInt(prompt("Introduce importe de la compra"));
@@ -158,4 +169,75 @@ function comprobar(){
     let operador = document.getElementById("Operadores").value;
     resultado = eval(operador);
     document.getElementById("resultado").innerHTML="Resultado" + resultado;
+}
+
+// document.getElementById("Ptabla").innerHTML=tabla();
+function tabla() {
+    var resultados = []; // Creamos un array vacío para almacenar los resultados
+
+    // 1
+    var n = parseInt(document.getElementById("tabla1").value); 
+    for (i = 1; i <= 10; i++) {
+        resultados.push(i + " x " + n + " = " + i * n); // Guardamos cada resultado en el array
+    }
+
+    // 2
+    for (i = 1; i <= 10; i++) {
+        resultados.push("La tabla del " + i);
+
+        for (j = 1; j <= 10; j++) {
+            resultados.push(i + " x " + j + " = " + i * j);
+        }
+    }
+
+    // 3
+    do {
+        var r = parseInt(document.getElementById("tabla2").value); 
+        for (i = 1; i <= r; i++) {
+            resultados.push("La tabla del " + i);
+
+            for (j = 1; j <= 10; j++) {
+                resultados.push(i + " x " + j + " = " + i * j);
+            }
+        }
+    } while (r >= 1); // Corregimos la condición del bucle
+
+    return resultados; // Devolvemos el array con los resultados
+}
+
+function mostrarTabla() {
+    var resultados = tabla(); // Obtener los resultados generados por la función
+
+    // Convertir el array en una cadena de texto
+    var resultadosHTML = resultados.join("<br/>");
+
+    // Insertar los resultados en el elemento con id "resss2"
+    document.getElementById("resss2").innerHTML = resultadosHTML;
+    document.querySelector('button[onclick="mostrarTabla()"]').disabled = true;
+}
+function limpiarTabla() {
+    // Limpiar el contenido del elemento con id "resss2"
+    document.getElementById("resss2").innerHTML = "";
+
+    // Habilitar el botón "Generar tabla" para poder generar una nueva tabla
+    document.querySelector('button[onclick="mostrarTabla()"]').disabled = false;
+}
+
+function Act2(num, num2, res=0){
+    let miarry = [];
+    num = parseInt(prompt("Introduce el primer numero"));
+    miarry.push(`El numero introducido  es ${num}`);
+    num2 = parseInt(prompt("Introduce el segundo numero"));
+    miarry.push(`El segundo numero es ${num2}`);
+    res = num + num2;
+    miarry.push(`El resulado de la suma de ${num} y ${num2} es ${res} `);
+    res = num - num2;
+    miarry.push(`El resulado de la resta de ${num} y ${num2} es ${res} `);
+    res = num * num2;
+    miarry.push(`El resulado de la multiplicacion de ${num} y ${num2} es ${res} `);
+    res = num / num2;
+    miarry.push(`El resulado de la division de ${num} y ${num2} es ${res}`);
+    console.log(miarry)
+    document.getElementById("sumita").innerHTML =miarry.join("<br/>");
+   
 }
