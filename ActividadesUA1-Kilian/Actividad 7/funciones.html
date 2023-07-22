@@ -5,31 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funciones</title>
     <script src="Actividad7.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section><h2>Funciones</h2></section>
     <section>
        
-        <button onclick="Act2()">Suma</button><br>
-        <button onclick="act3()">Actividad3</button><br>
-        <button onclick="act4()">Actividade4</button>
-        <button onclick="act5()">Actividad5</button>
-        <button onclick="inicio()">inicio</button>
-        <button onclick="meses()">Meses</button>
+        <button onclick="Act2()">Suma</button>
+        <button onclick="act4()">Niños</button>
         <button onclick="contraseñas()">Contra</button>
 
 
         <div>
             <label for="Tabla">Tabla</label>
             <input type="number" id="tabla1">
-            <input type="number" id="tabla2">
+            <!--<input type="number" id="tabla2">-->
              <button onclick="mostrarTabla()">Generar tabla</button>
              <button onclick="limpiarTabla()">Limpiar</button>
         </div>
+        <div>
+            <label for="Meses">Meses</label>
+            <input type="text" id="meses1" placeholder="Importe">
+            <input type="text" id="meses2" placeholder="Mes">
+            <button onclick="meses()">Descuento</button>
+        </div>
+        <div>
+        <label for="Clave">Introduce la clave</label>
+        <input type="number" id="clave2" placeholder="Clave">
+        <button onclick="inicio()">Entrar</button>
+        </div>
+        <div>
+            <label for="Mayor a">Mayor de dos numero</label>
+            <input type="number" id="numero1" placeholder="Primer numero">
+            <input type="number" id="numero2" placeholder="Segundo numero">
+            <button onclick="act3()">Calcular</button>
+        </div>
+        <div></div>
         <div></div>
         <div></div>
          <p id="resss2"></p>   
          <p id="sumita"></p>
+         <p id="mesitos"></p>
+         <p id="clave1"></p>
+         <p id="dosNumeros"></p>
+         <p id="niñes"></p>
+         <p id="Contras"></p>
     </section>
 
 </body>

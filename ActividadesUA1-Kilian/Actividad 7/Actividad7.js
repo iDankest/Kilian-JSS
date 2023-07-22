@@ -15,36 +15,40 @@
 //     document.getElementById("sumita").innerHTML =miarry.join();
 // }
 
-function act3(nume, nume2){
-nume = parseInt(prompt("Introduce el primer numero"));
-console.log(nume)
-nume2 = parseInt(prompt("Introduce el segundo numero"));
-console.log(nume2)
+const { questionNewPassword } = require("readline-sync");
 
+function act3(nume, nume2){
+nume = parseInt(document.getElementById("numero1").value);
+console.log(nume)
+nume2 = parseInt(document.getElementById("numero2").value);
+console.log(nume2)
+let myarry =[];
 if (nume>=nume2){
     if(nume==nume2){
-        console.log("Son iguales");
+        myarry.push("Son iguales");
     }else{
-        console.log(nume+" mayor");
+        myarry.push(nume+" mayor");
     }
 }else{
-    console.log(nume2 + " Es mayor");
+    myarry.push(nume2 + " Es mayor");
 }
+document.getElementById("dosNumeros").innerHTML = myarry.join("<br/>")
 }
 
 function act4(niños, niñas){
-    niños = parseInt(prompt("Dame numero"));//cambia Texto por Cantidad de niños
-    console.log(niños);
+    let myarry = [];
+    niños = parseInt(prompt("Numero de niños"));//cambia Texto por Cantidad de niños
+    myarry.push("Hay "+niños+" niños");
     
-    niñas = parseInt(prompt("Dame niñas"));//cambia Texto por Cantidad de niñas
-    console.log(niñas)
+    niñas = parseInt(prompt("Numero de niñas"));//cambia Texto por Cantidad de niñas
+    myarry.push("Hay "+niñas+" niñas");
     
     proniño = niños*100/(niñas+niños);
     proniña = 100-proniño;// es una forma de hacerlo lo recomendable realizar la operación
     
-    console.log("hay un "+ proniño + " % de niños");
-    console.log("hay un "+ proniña + " % de niñas");
-    
+    myarry.push("hay un "+ proniño.toFixed(2) + " % de niños");
+    myarry.push("hay un "+ proniña.toFixed(2) + " % de niñas");
+    document.getElementById("niñes").innerHTML = myarry.join("<br/>")
 }
 function act5(impor, mes){
 impor = parseInt(prompt("Introduce importe de la compra"));
@@ -60,22 +64,27 @@ if (mes=="OCTUBRE") {
 }
 
 }
-function inicio(clave){
-
-    for(var n =0; n<3; n++){
-        clave = parseInt(prompt("Intorduce clave"));
+var n=0;
+function inicio(){
+    let myarry =[];
+    
+   // for(var n =0; n<3; n++){
+        var clave = parseInt(document.getElementById("clave2").value);
         if (clave===123456) {
-            document.write("Estas dentro");
-            break;
+            myarry.push("Estas dentro");
         } else {
-            document.write("Te quedan " + (n + 1) + " intentos " + "<br/>");
+            n++
+            myarry.push("Te quedan " + (3 - n) + " intentos ");
+             if (n === 3) { 
+            myarry.push("Has excedido el número máximo de intentos");
         }
         
+    //}
     }
-        if (n === 3) {
-        document.write("Has excedido el número máximo de intentos");
-      }
+       
+      document.getElementById("clave1").innerHTML = myarry.join("<br/>");
     }
+
 
 //     function tabla() {
 //         var resultados = [];
@@ -119,51 +128,56 @@ function inicio(clave){
 
 
 function meses() {
-    var impor = parseInt(prompt("Introduce importe de la compra"));
-document.write(impor + "<br/>");
-var mes = prompt("Introduce el mes");
-document.write(mes+ "<br/>");
+    var impor = parseInt(document.getElementById("meses1").value);
+//document.write(impor + "<br/>");
+var mes = document.getElementById("meses2").value;
+//document.write(mes+ "<br/>");
 mes=(mes.toUpperCase());
  console.log(mes);
-
+let miarry = [];
 switch (mes) {
     case "AGOSTO":
-        document.write("El importe es de un valor de "+(impor*0.85));
-       
+    case "OCTUBRE":
+    case "JULIO":
+        miarry.push("El importe es de un valor de "+(impor*0.85));
         break;
-    case "ENERO" || "FEBRERO":
-        document.write("El importe es de un valor de "+(impor*0.80));
+    case "ENERO":
+    case "FEBRERO":
+        miarry.push("El importe es de un valor de "+(impor*0.80));
         break;
-    case "NOVIEMBRE" || "DICIEMBRE":
-        document.write("El importe es de un valor de "+(impor*0.75));
+    case "NOVIEMBRE":
+    case "DICIEMBRE":
+        miarry.push("El importe es de un valor de "+(impor*0.75));
         break;
 
     default:
-        document.write("El importe es de un valor de "+(impor));
+        miarry.push("El importe es de un valor de "+(impor));
         break;
 }
-    
+    document.getElementById("mesitos").innerHTML = miarry.join("<br/>")
 }
 
 function contraseñas() {
+    let myarry = [];
     var inicio = prompt("Usuario");
 inicio = inicio.toLowerCase();
 if(inicio == "admin") {
-    var pass = prompt("Contraseña");
+    var pass = prompt("Contraseña", type=password);
     if (pass == "Webmaster") {
-        alert("Bienvenido");
+        myarry.push("Bienvenido");
     } else if(pass == "" || pass == null){
-        alert("Cancelado");
+        myarry.push("Cancelado");
     }else{
-        alert("Incorecta");
+        myarry.push("Incorecta");
     }
 
 
 }else if(inicio == "" || inicio == null){
-    alert("Has cancelado");
+    myarry.push("Has cancelado");
 }else{
-    alert("La Incorrecto");
+    myarry.push("La Incorrecto");
 }
+document.getElementById("Contras").innerHTML = myarry.join("<br/>")
 }
 function comprobar(){
     let operador = document.getElementById("Operadores").value;
