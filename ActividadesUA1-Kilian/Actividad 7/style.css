@@ -7,8 +7,9 @@ p{
 }
 .botonera{
    display: flex;
-   justify-content: space-evenly;
+   justify-content: center;
    margin-bottom: 3em;
+   gap: 2em;
 }
 .botonStyle{
     width: 100px;
