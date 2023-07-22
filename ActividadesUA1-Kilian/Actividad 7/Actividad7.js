@@ -15,8 +15,6 @@
 //     document.getElementById("sumita").innerHTML =miarry.join();
 // }
 
-const { questionNewPassword } = require("readline-sync");
-
 function act3(nume, nume2){
 nume = parseInt(document.getElementById("numero1").value);
 console.log(nume)
@@ -162,7 +160,7 @@ function contraseñas() {
     var inicio = prompt("Usuario");
 inicio = inicio.toLowerCase();
 if(inicio == "admin") {
-    var pass = prompt("Contraseña", type=password);
+    var pass = prompt("Contraseña", "Contraseña");
     if (pass == "Webmaster") {
         myarry.push("Bienvenido");
     } else if(pass == "" || pass == null){

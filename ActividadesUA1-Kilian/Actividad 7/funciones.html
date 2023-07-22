@@ -10,32 +10,32 @@
 <body>
     <section><h2>Funciones</h2></section>
     <section>
-       
-        <button onclick="Act2()">Suma</button>
-        <button onclick="act4()">Niños</button>
-        <button onclick="contraseñas()">Contra</button>
-
+        <div class="botonera">
+        <button class="botonStyle" onclick="Act2()">Suma</button>
+        <button class="botonStyle" onclick="act4()">Niños</button>
+        <button class="botonStyle" onclick="contraseñas()">Contra</button>
+        </div>
 
         <div>
-            <label for="Tabla">Tabla</label>
-            <input type="number" id="tabla1">
-            <!--<input type="number" id="tabla2">-->
+            <label for="Tabla">Tabla</label><br>
+            <input type="number" id="tabla1" placeholder="Introduce numero">
+            <input type="number" id="tabla2" placeholder="Peta">
              <button onclick="mostrarTabla()">Generar tabla</button>
              <button onclick="limpiarTabla()">Limpiar</button>
         </div>
         <div>
-            <label for="Meses">Meses</label>
+            <label for="Meses">Meses</label><br>
             <input type="text" id="meses1" placeholder="Importe">
             <input type="text" id="meses2" placeholder="Mes">
             <button onclick="meses()">Descuento</button>
         </div>
         <div>
-        <label for="Clave">Introduce la clave</label>
+        <label for="Clave">Introduce la clave</label><br>
         <input type="number" id="clave2" placeholder="Clave">
         <button onclick="inicio()">Entrar</button>
         </div>
         <div>
-            <label for="Mayor a">Mayor de dos numero</label>
+            <label for="Mayor a">Mayor de dos numero</label><br>
             <input type="number" id="numero1" placeholder="Primer numero">
             <input type="number" id="numero2" placeholder="Segundo numero">
             <button onclick="act3()">Calcular</button>
