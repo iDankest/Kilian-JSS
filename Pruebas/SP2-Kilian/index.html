@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP2-Kilian</title>
+    <style>
+        body.dark-mode{
+            background-color: black;
+            color: azure;
+        }
+        img{
+            width: 20%;
+            height: 20%;
+            padding-left: 5em;
+        }
+    </style>
+</head>
+<body>
+    <button id="dark">Oscuro</button>
+    <img src="R.jfif" id="myimg" >
+    <script>
+        var body = document.querySelector("body");
+        var mimg =document.getElementById("myimg");
+        mimg.addEventListener("mousemove", function(){
+            mimg.src="R2.jfif"
+        });
+        mimg.addEventListener("mouseleave", function(){
+            mimg.src = "R.jfif";
+        });
+        dark.addEventListener("click", function(){
+          body.classList.toggle("dark-mode");
+        })
+    </script>
+    
+</body>
+</html>
