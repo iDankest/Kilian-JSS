@@ -1,0 +1,107 @@
+*{
+    margin: auto;
+}
+body{
+    background: #77D2FF;
+}
+section{
+    display: flex;
+    
+    
+}
+img{
+    margin-left: 3em;
+    border-radius: 180.5px;
+    width: 361px;
+    height: 395px;
+    flex-shrink: 0;
+
+}
+div p{
+    color: #000;
+    font-family: Roboto Mono;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 2.5em;
+}
+.contendor{
+    width: 571px;
+    height: 571px;
+    border-radius: 73px;
+    background: #4686A6;
+    margin-right: 10em;
+}
+.formulario input{
+    width: 20em;
+    height: 2em;
+    border-radius: 1.8em;
+    background-color: #7ECBF2;
+
+}
+label{
+    padding-top: 1em;
+    color: #FFF;
+    font-family: Roboto Mono;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+input::placeholder{
+    padding-left: 2em;
+}
+header{
+    display: flex;
+    background-color: #4686A6; 
+    align-items: center;  
+    justify-content: space-evenly;
+    margin-bottom: 5em;
+}
+ul{
+    display: flex;
+    margin-right: 4em;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+li{
+    list-style: none;
+}
+li:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+#avisos{
+    width: 200px;
+    font-size: 12px;
+    text-align: center;
+    color: rgb(118, 35, 129);
+    padding-top: 20px;
+}
+button{
+    width:15em;
+    height: 2.5em;
+    cursor: pointer;
+    background-color: #87388a;
+    border-radius: 10em;
+    color: #ffffff;
+}
+button:hover{
+    background-color: #77D2FF;
+}
+body.dark{
+    background-color: gray;
+}
+#dark:hover{
+transition: transform 0.3s ease;
+transform: scale(1.2);
+}
