@@ -34,14 +34,14 @@ div p{
     gap: 2.5em;
 }
 .contendor{
-    width: 571px;
-    height: 571px;
+    width: 35em;
+    height: 35em;
     border-radius: 73px;
     background: #4686A6;
     margin-right: 10em;
 }
 .formulario input{
-    width: 20em;
+    width: 17em;
     height: 2em;
     border-radius: 1.8em;
     background-color: #7ECBF2;
@@ -104,4 +104,16 @@ body.dark{
 #dark:hover{
 transition: transform 0.3s ease;
 transform: scale(1.2);
+}
+footer{
+    display: flex;
+    position: absolute;
+    background-color: #000;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    height: 2.5em;
+    align-items: center;
+    justify-content: center;
 }
