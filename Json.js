@@ -53,3 +53,7 @@ localStorage.setItem("alumno", JSON.stringify(alumno));
 var alumnojs =JSON.parse(localStorage.getItem("alumno"))
 
 document.querySelector("#totalalumnos").append(alumnojs.nombre + "------" + alumnojs.correo + "-----" + alumnojs.telefono);
+
+localStorage.removeItem("Listado");
+
+localStorage.clear();
