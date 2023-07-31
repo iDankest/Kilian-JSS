@@ -74,7 +74,10 @@ form.addEventListener("submit", e=>{
 	}if (entrar) {
 		parrafo.innerHTML = avisos
 	} else {
-		parrafo.innerHTML = 'Enviado'
+		parrafo.innerHTML = 'Enviado, Espere 1 s'
+		setTimeout(function() {
+			window.open("logout.html", "_blank");
+		  }, 1500);
 	}
 })
 var body = document.querySelector("body");
