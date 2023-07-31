@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <style>
+        body{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: #77D2FF;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            background-color: #4686A6;
+            width: 35em;
+            height: 35em;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3em;
+        }
+        button{
+            width:15em;
+            height: 2.5em;
+            cursor: pointer;
+            background-color: #87388a;
+            border-radius: 10em;
+            color: #ffffff;
+        }
+        button:hover{
+            background-color: #1e2529;
+        }       
+    </style>
+</head>
+<body>
+    <header></header>
+    <section>
+        <h3>Bienvenido</h3>
+        <div id="dateNombre"></div>
+        <div id="dateEmail"></div>
+        <div id="datePass"> </div>
+        <button id="boton">Logout</button>
+    </section>
+    <footer></footer>
+    <script>
+    // Obtener los elementos del HTML
+    var nombreElement = document.getElementById("dateNombre");
+    var emailElement = document.getElementById("dateEmail");
+    // Obtener los datos almacenados en localStorage o cookies
+    var nombreGuardado = localStorage.getItem("nombre") || obtenerCookie("nombre");
+    var emailGuardado = localStorage.getItem("email") || obtenerCookie("email");
+    // Mostrar los datos en los elementos correspondientes
+    nombreElement.innerHTML = `Nombre: ${nombreGuardado} `;
+    emailElement.innerHTML = `Email:   ${emailGuardado}`;
+    // Función para obtener una cookie específica
+    function obtenerCookie(nombre) {
+    var nombreCookie = nombre + "=";
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        while (cookie.charAt(0) == ' ') {
+        cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(nombreCookie) == 0) {
+        return cookie.substring(nombreCookie.length, cookie.length);
+        }
+    }
+    return "";
+    }
+    var boton = document.querySelector("#boton")
+    boton.addEventListener('click', function(){
+        window.location.href= "login.html"
+    })
+    </script>
+</body>
+</html>

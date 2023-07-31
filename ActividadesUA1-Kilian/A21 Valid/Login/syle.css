@@ -96,14 +96,15 @@ button{
     color: #ffffff;
 }
 button:hover{
-    background-color: #77D2FF;
+    background-color: #1e2529;
 }
 body.dark{
     background-color: gray;
 }
 #dark:hover{
-transition: transform 0.3s ease;
-transform: scale(1.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: scale(1.2);
 }
 footer{
     display: flex;

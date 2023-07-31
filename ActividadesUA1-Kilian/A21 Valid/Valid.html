@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validaciones</title>
+</head>
+<body>
+    <div class="box">
+    <form action="" id="formulario" method="POST" onsubmit="return false">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <span id="error_nombre"></span>
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos">
+        <span id="error_apellidos"></span>
+
+        <label for="">Edad</label>
+        <input type="number" name="edad">
+        <span id="error_edad"></span>
+        <input type="submit" value="Enviar" id="submit">
+    </form>
+    </div>
+    <div class="box-info">
+        <h3>Información del usuario</h3>
+        <hr>
+        <p id="iNombre">
+            Nombre: <span></span>
+        </p>
+        <p id="iApellidos">
+            Apellidos: <span></span>
+        </p>
+        <p id="iEdad">
+            Edad: <span></span>
+        </p>
+
+    </div>
+</body>
+</html>

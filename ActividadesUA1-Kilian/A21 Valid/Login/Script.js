@@ -74,9 +74,12 @@ form.addEventListener("submit", e=>{
 	}if (entrar) {
 		parrafo.innerHTML = avisos
 	} else {
+		localStorage.setItem('nombre', nombre.value);
+		localStorage.setItem('email' , email.value);
 		parrafo.innerHTML = 'Enviado, Espere 1 s'
 		setTimeout(function() {
-			window.open("logout.html", "_blank");
+			//window.open("logout.html", "_blank");
+			window.location.href = "logout.html"
 		  }, 1500);
 	}
 })
@@ -85,3 +88,13 @@ var dark = document.getElementById('dark');
 dark.addEventListener("click", function(){
 	body.classList.toggle("dark");
   })
+
+  //Mostrar datos en logout
+//   var nombreElement = document.getElementById("dateNombre");
+//   var emailElement = document.getElementById("dateEmail");
+
+//   var dateNombre = localStorage.getItem('nombre');
+//   var dateEmail = localStorage.getItem('email');
+
+//   nombreElement.innerHTML = "Nombre: " + dateNombre;
+//   emailElement.innerHTML = "Email: " + dateEmail;
