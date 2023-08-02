@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <section>
-            <img src="" alt="">
+            <img src="media/logo.jpg" alt="">
             <nav>
                 <ul>
                     <li id="inicio">Inicio</li>
@@ -18,27 +19,29 @@
             </nav>
         </section>
     </header>
+    <div class="main-contenedor">
     <section>
         <div>
-            <h3>Nombre Usuario</h3>
-            <p>Rol</p>
+            <h3 id="bienvenido">Nombre Usuario</h3>
+            <p id="mostrarEmail">Rol</p>
         </div>
     </section>
     <section>
-        <form action=""></form>
+        <form  class="formulario">
         <label for="Nombre">Nombre
-            <input type="text">
+            <input type="text" id="nombre">
         </label>
-        <label for="Correo">Correo Electrónico
-            <input type="email">
+        <label for="Correo">Correo
+            <input type="email" id="email">
         </label>
-        <label for="Asunto">
-            <input type="text">
+        <label for="Asunto">Asunto
+            <input type="text" id="asunto">
         </label>
-        <label for="Mensaje">
-            <input type="text">
+        <label for="Mensaje">Mensaje
+            <input type="text" id="mensaje">
         </label>
-        <button>ENVIAR</button>
+        <button id="addbutton">ENVIAR</button>
+    </form>
     </section>
     <section>
         <div>
@@ -51,10 +54,12 @@
     <section>
         <p>Texto legal</p>
     </section>
+    </div>
     <footer>
         <section>
             <p>Todos los derecheros reservados</p>
         </section>
     </footer>
+<script src="funcionalidad.js"></script>
 </body>
 </html>
