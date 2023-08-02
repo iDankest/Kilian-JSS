@@ -1,0 +1,22 @@
+header section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    margin-right: 1em;
+}
+footer{
+    bottom: 0;
+    position: absolute;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) 3fr;
+} 
+section{
+    border: 3px black solid;
+}
