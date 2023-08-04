@@ -54,6 +54,15 @@ contacto.addEventListener('click', function(){  //Formulario
     `
 })
 
+let accPro = document.querySelector("#accProfesor");
+let accAlu = document.querySelector("#accAlumno");
+
+accPro.addEventListener('click', function () {
+    createModal(` <h1>Hola</h1>
+    `)
+})
+
+
 function saveALocal(llave, vSave){
     localStorage.setItem(llave, JSON.stringify(vSave))
 }
