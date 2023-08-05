@@ -3,7 +3,7 @@ $(document).ready(function () {
     <div>
     <h1>Entra en nuestra academia</h1>
     <p>Crea tu itinerario formativo</p>
-    <button>INFORMACIÓN</button>
+    <button id='hd'>INFORMACIÓN</button>
     </div>
     `)
     $("#inicio").click(function () {
@@ -11,7 +11,7 @@ $(document).ready(function () {
         <div>
         <h1>Entra en nuestra academia</h1>
         <p>Crea tu itinerario formativo</p>
-        <button>INFORMACIÓN</button>
+        <button id='hd'>INFORMACIÓN</button>
         </div>
         `)
     })
@@ -48,22 +48,26 @@ $(document).ready(function () {
         </form>
         `)
     })
-    $("#accProfesor").click(function() {
-        $(".modal").show();
-      });
-    
-      $(".cerrar").click(function() {
-        $(".modal").hide();
-      });
-    
-    // $("#accProfesor").click(function () {
-    //     $(".modal").css("opacity", "1");
-    //     $(".modal").css("pointer-events", "unset");
-    // })
-    
-    $(document).ready(function() {
-        $("#accProfesor").click(function() {
-          $(".modal").show();
-        });
-      });
+
+    $('#accProfesor').click(function(){
+        $('.modal').toggleClass("active");
+    })
+    $('#accAlumno').click(function(){
+        alert('En construcción')
+    })
+    $('.cerrar_modal').click(function(){
+        $('.modal').toggleClass("active");
+    })
+    $('#hd').click(function() {
+        $('.right-box').toggleClass('active')
+    })    
+    $('.luna').click(function(){
+        $("body").toggleClass("darkmode");
+        $('.main-contenedor').toggleClass('darkmode');
+        $('button').toggleClass('darkmode');
+        $('li').toggleClass('darkmode');
+        $('.modal').toggleClass('darkmode');
+    })
+  
+
 })
