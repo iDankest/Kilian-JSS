@@ -92,7 +92,7 @@ button:hover{
     margin-left: -200px;
     margin-top: -150px;
     background: wheat;
-    z-index: 10;
+    z-index: 1;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 0 99999px rgba(0, 0 ,0, 0.5);
