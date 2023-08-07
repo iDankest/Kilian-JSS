@@ -1,6 +1,6 @@
-:root{
+/* :root{
     --avatar: url("/media") 
-}
+} */
 header section{
     height: 10%;
     display: flex;
@@ -38,7 +38,7 @@ section{
     background-size: cover;
 }
 header img{
-    width: 8vw;
+    width: 5vw;
     border-radius: 50%;
     border: 1px black solid;
 }
