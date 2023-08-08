@@ -22,6 +22,8 @@ header img{
 
 header ul {
     display: flex;
+    align-items: center;
+    justify-content: center;
     list-style: none;
 }
 
@@ -84,4 +86,40 @@ footer{
 }
 footer img{
     width: 15em;
+}
+ul img{
+    margin-left: 2em;
+    width: 40px;
+    height: 40px;
+    border: 2px black solid;
+    border-radius: 50%;
+}
+ul img:hover{
+    scale: 1.6;
+    transition: 2s;
+}
+ul img.modo-oscuro{
+    border: 2px #fff solid;
+}
+body.modo-oscuro{
+    color: #ffffff;
+    background-color: #221b1b;
+}
+a.modo-oscuro{
+    color: #ffffff;
+}
+#seccion3.modo-oscuro{
+    color: #ffffff;
+    background-color: #221b1b;
+}
+body.active{
+    font-size: 24px;
+}
+.ui-accordion-header.active{
+    color: #fff;
+    background-color: black;
+}
+.ui-accordion-content.active{
+    color: #fff;
+    background-color: black;
 }
