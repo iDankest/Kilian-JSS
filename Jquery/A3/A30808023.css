@@ -27,3 +27,8 @@ header{
 footer{
     min-height: 5vh;
 }
+.puntos:hover{
+    scale: 1.6;
+    transition: 1.5s;
+    cursor: pointer;
+}
