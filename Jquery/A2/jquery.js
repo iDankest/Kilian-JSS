@@ -62,6 +62,22 @@ $(document).ready(function () {
     // })
     $('#contenedor').draggable();
     $(function () {
-        $('#accordion').accordion();
-    })
+        $('#accordion').accordion({
+            collapsible: true,
+            active: false,
+            icons:{header:"ui-icon-caret-1-s", activeHeader:"ui-icon-caret-1-n"},
+            animate: 1500,
+            event: "mouseover"
+        });
+        })
+        $('#accordion').on('mouseleave', function() {
+            $('#accordion').accordion("option", "active", false);
+        })
+        $('#menu-desplegable').accordion({
+            collapsible: true,
+            active: false,
+            icons: { header: "ui-icon-caret-1-s", activeHeader: "ui-icon-caret-1-n" },
+            animate: 1500,
+            event: "click"
+          });
 });
