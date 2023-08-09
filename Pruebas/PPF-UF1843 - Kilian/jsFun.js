@@ -1,5 +1,12 @@
 $(document).ready(function () {
-    $('#uno')
+    $(document).tooltip();
+    $('#uno').click(function () { 
+        $('.modal').toggleClass('active');
+        
+    });
+    $('.cerrar_modal').click(function(){
+        $('.modal').toggleClass("active");
+    })
     
     $('#dos').on('click', function () {
         $('#principal').sortable();
@@ -26,28 +33,58 @@ $(document).ready(function () {
         myboolean = !myboolean;
     })
     $('#cinco').on('click', function () {
-        $('.cont3').dialog();
+        if (myboolean) {
+          $('.cont5').css({
+            backgroundColor: 'blue',
+            color: 'white',
+            fontSize: '30px'
+        })  
+        } else {
+            $('.cont5').css({
+                backgroundColor: 'white',
+                color: 'black',
+                fontSize: '19px'
+            }) 
+        }
+        myboolean = !myboolean;
     })
     $('#seis').on('click', function () {
-        $('.cont3').dialog();
+        $('.cont6').hide();
     })
     $('#siete').on('click', function () {
-        $('.cont3').dialog();
+        $('.cont6').show();
     })
     $('#ocho').on('click', function () {
-        $('.cont3').dialog();
+        $('.cont13').show();
     })
     $('#nueve').on('click', function () {
-        $('.cont3').dialog();
+        $('#principal').hide(1000, function () {
+            $('#principal').before('<h1 class="bb">Hola</h1>');
+        });
     })
     $('#diez').on('click', function () {
-        $('.cont3').dialog();
+        $('.bb').remove();
+        $('#principal').show(1000, function () {
+            alert('de locos')
+        });
     })
     $('#once').on('click', function () {
-        $('.cont3').dialog();
+        $('#principal').toggle("fade" ,1000);
     })
     $('#doce').on('click', function () {
-        $('.cont3').dialog();
+        $('.cont9').toggle(1000, function () {
+            $('.cont9').html(`
+                <ul>
+                    <li>Inicio</li>
+                    <li>Curso</li>
+                    <li>Contacto</li>
+                </ul> 
+            `);
+        });
     })
-
+    $('#trece').click(function () { 
+        $('body').fadeOut(1000, function () {
+            location.reload();
+        });
+    });
 });

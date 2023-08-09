@@ -93,15 +93,20 @@ footer img{
     width: 100%;
   }
   
-  .modal-btn-closed {
+  .cerrar_modal {
     position: absolute;
     top: 5px;
     right: 3px;
+    margin-right: 0.7em;
     background: none;
     border: none;
     outline: none;
     font-size: 20px;
     cursor: pointer;
+  }
+  .cerrar_modal:hover{
+    scale: 1.6;
+    transition: 1.5s;
   }
   
   .modal-title {
@@ -129,7 +134,7 @@ footer img{
     color: red;
   }
 
-.modal-desdeArriba {
+.modal_desdeArriba {
     animation: desdeArriba 1s;
     
   }
