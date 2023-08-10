@@ -1,0 +1,38 @@
+body{
+    background-color: grey;
+    margin-top: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    font-size: 16px;
+    color: aliceblue;
+     font-family: Cascadia Code, "Helvetica Neue", Helvetica, sans-serif; 
+}
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+form{
+    display: grid;
+    grid-column: auto;
+    gap: 1em;
+}
+div{
+    border-radius: 10%;
+    border: 5px black solid;
+    background-color: rgb(5, 86, 86);
+    padding: 50px;
+}
+input{
+    height: 2em;
+}
+#enviar{
+    font-family: Cascadia Code, Helvetica, sans-serif;
+}
+#enviar:hover{
+    color: aliceblue;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.718);
+}
