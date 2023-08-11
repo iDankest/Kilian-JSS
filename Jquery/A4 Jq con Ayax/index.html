@@ -23,27 +23,31 @@ Edad:
 Fotografía:
      -->
      <div>
-    <form action="" method="post" id="formulario">
+    <form action="https://reqres.in/api/users" method="POST" id="formulario">
         <label for="codigo">
-            Código:<input type="number" id="codigo">
+            Código:<input type="number" id="codigo" name="codigo">
         </label>
         <label for="nombre">
-            Nombre: <input type="text" id="nombre">
+            Nombre: <input type="text" id="nombre" name="nombre">
         </label>
         <label for="Apellidos">
-            Apellidos: <input type="text" id="Apellidos">
+            Apellidos: <input type="text" id="Apellidos" name="apellidos">
         </label>
         <label for="Correo">
-           Correo: <input type="email" id="Correo">
+           Correo: <input type="email" id="Correo" name="correo">
         </label>
         <label for="Edad">
-            Edad: <input type="number" id="Edad">
+            Edad: <input type="number" id="Edad" name="edad">
         </label>
         <label for="Foto">
-            foto: <input type="file" id="Foto"> 
+            foto: <input type="file" id="Foto" name="foto"> 
         </label>
-        <input type="submit" value="Enviar" id="enviar">
+        <input type="submit" value="Enviar">
     </form>
+</div>
+
+<div id="datos">
+
 </div>
 </body>
 </html>
