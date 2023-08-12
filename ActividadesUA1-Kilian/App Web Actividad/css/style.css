@@ -2,6 +2,7 @@ header{
     border-radius: 3.5em;
     padding: 1.2em;
     background-color: rgba(88, 88, 180, 0.979);
+    margin: 1em;
 }
 ul{
     display: flex;
@@ -9,7 +10,7 @@ ul{
     align-items: center;
     gap: 1em;
 }
-li{
+header li{
     list-style: none;
 }
 nav{
@@ -29,34 +30,164 @@ footer{
     position: absolute;
     background-color: brown;
 }
-section{
-    display: flex;
-    margin: 1em;
-    gap: 5em;
-}
-.comotal{
-    margin-top: 3em;
-    width: 30%;
-    /* position: absolute; */
-}
-.contenido{
-    /* position: ; */
-    width: 70%;
+footer.active{
+    position: absolute;
 }
 header img:hover{
     cursor: pointer;
     scale: 1.2;
     transition: 1.5s;
 }
-li:hover{
+header li:hover{
     color: aliceblue;
     cursor: pointer;
 }
 body{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
     background-color: rgba(172, 157, 157, 0.589);
     font-family: 'Cascadia Code';
 }
 .darkmode{
     background-color: black;
     color: white;
+}
+.contenido_form label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+.contenido_form form{
+    display: grid;
+    grid-column: auto;
+    gap: 1em;
+}
+.contenido_form{
+    margin-right: 70vh;
+    margin-top: 5vh;
+    margin-left: 30vh;
+    border-radius: 10%;
+    border: 5px black solid;
+    background-color: rgb(5, 86, 86);
+    width: 250px;
+    padding: 2.5em;
+}
+.contenido_form input{
+    height: 2em;
+}
+#enviar{
+    font-family: Cascadia Code, Helvetica, sans-serif;
+}
+#enviar:hover{
+    color: aliceblue;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.718);
+}
+#datos{
+    border: 2px solid green;
+    width: 400px;
+    height: 400px;
+    overflow: scroll;
+}
+h2{
+    text-align: center;
+}
+.grip_contenedor{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+}
+.grip_contenedor img{
+    border-radius: 10px;
+    width: 50vh;
+    height: 25vh;
+}
+.contenido_form2{
+    margin-right: 70vh;
+    margin-top: 5vh;
+    margin-left: 20vh;
+    border-radius: 10%;
+    border: 5px black solid;
+    background-color: rgb(5, 86, 86);
+    width: 350px;
+    padding: 2.5em;
+}
+.contenido_form2 form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.contenido_form2 label{
+    display: flex;
+    flex-direction: column;
+}
+.contendido_contacto{
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding-bottom: 2em;
+    top: 20vh;
+    left: 40%;
+    border-radius: 10%;
+    box-shadow: 0, 0,0,99999px rgba(0, 0, 0, 0.05);
+    width: 400px;
+    height: auto;
+    background-color: rgb(88, 88, 180);
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+.contendido_contacto.active{
+
+    opacity: 1;
+
+} 
+.contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.contacto label{
+    display: flex;
+    flex-direction: column;
+}
+.cerrar{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    margin: 0;
+    font-size: 25px;
+}
+.cerrar:hover{
+    cursor: pointer;
+    scale: 1.6;
+    transition: 1.5s;
+}
+.ui-accordion{
+ width: 30%;
+}
+.ui-accordion-header{
+    color: #fff;
+    background-color: rgba(136, 116, 116, 0.233);
+}
+.ui-accordion-content{
+    color: #fff;
+    background-color: black;
+}
+.contenido{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    
+ } 
+ section{
+    margin: 2em;
+    display: flex;
+    align-items: center;
+    gap: 10%;
 }
