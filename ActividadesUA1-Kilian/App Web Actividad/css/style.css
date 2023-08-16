@@ -103,7 +103,16 @@ h2{
     border-radius: 10px;
     width: 50vh;
     height: 25vh;
+    transition: transform 1s
 }
+
+.grip_contenedor img:hover {
+    transform: scale(0.8);
+    transition: transform 1s;
+    cursor: pointer;
+}
+
+
 .contenido_form2{
     margin-right: 70vh;
     margin-top: 5vh;
@@ -124,7 +133,7 @@ h2{
     flex-direction: column;
 }
 .contendido_contacto{
-    display: flex;
+    display: none;
     z-index: 1;
     flex-direction: column;
     justify-content: center;
@@ -142,7 +151,7 @@ h2{
     transition: opacity 0.3s ease; 
 }
 .contendido_contacto.active{
-
+    display: flex;
     opacity: 1;
 
 } 

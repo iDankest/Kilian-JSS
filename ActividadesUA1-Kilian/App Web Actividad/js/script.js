@@ -28,15 +28,16 @@ $(document).ready(function () {
     $('#contenido').html(`
     <div class="contenido_form">
     <h2>Login</h2>
-    <form action="https://reqres.in/api/users" method="POST" id="formulario">
-        <label for="nombre">
-            Usuario: <input type="text" id="nombre" name="nombre">
+    <form id="form_acceder">
+        <label for="user">
+            Usuario: <input type="text" id="user" name="user">
         </label>
-        <label for="Apellidos">
-            Contraseña: <input type="password" id="Apellidos" name="apellidos">
+        <label for="pass">
+            Contraseña: <input type="password" id="pass" name="pass">
         </label>
-        <input type="submit" value="Enviar">
+        <input id='enviar' type="submit" value="Enviar">
     </form>
+    <p id="verificar"></p>
 </div>`);
         $('footer').addClass('active');
     });
@@ -73,16 +74,16 @@ $(document).ready(function () {
         <h2>CURSOS</h2>
         <div class="grip_contenedor">
         <div>
-            <img src="media/1687300553_c_html.png" alt="">
+            <img src="media/1687300553_c_html.png" alt="" class='imagen'>
         </div>
         <div>
-            <img src="media/2.avif" alt="">
+            <img src="media/css.png" alt="" class='imagen'>
         </div>
         <div>
-            <img src="media/Course-Image-1.png" alt="">
+            <img src="media/Course-Image-1.png" alt="" class='imagen'>
         </div>
         <div>
-            <img src="media/CURSO-JAVASCRIPT-GRATIS-FACIALIX.jpg" alt="">
+            <img class='imagen' src="media/CURSO-JAVASCRIPT-GRATIS-FACIALIX.jpg" alt="">
         </div>
     </div>
         `);
@@ -127,4 +128,63 @@ $(document).ready(function () {
         $('.comotal').accordion("option", "active", false);
     })
     
+    const root = {
+        user: 'Admin',
+        pass: '123456'
+    }
+    // $('#miformulario').submit(function (e) { 
+    //     e.preventDefault();
+    //     let user, pass;
+    //     user = $('#user').val();
+    //     pass = $('#pass').val();
+    //     console.log('funciona')
+    //     if (user === "" || pass === "") {
+    //         console.log('funciona2')
+    //         $('#verificar').text('Los campos estan vacios')
+    //     }
+    // });
+    
+    
+    $("#enviar").on('submit', function (e) { 
+        e.preventDefault();
+
+        var user = $("#user").val()
+        var pass = $("#pass").val()
+
+       
+        if (user === "" || pass === "") {
+                alert("Campos no pueden estar vacíos ")
+            }else if (user !== root.user || pass !== root.pass) {
+                alert('usuario o contraseña no existen')
+            }else{
+                alert('bienvenido')
+                $("#usuario").append(`<p>${user}</p>`)
+            }
+            
+    });
+    
+
+    
+
 });
+    // var botonenviar = document.querySelector("#enviar")
+    
+    // botonenviar.addEventListener('click', function (event) {
+    // event = preventDefault();
+    // console.log("Me has pulsado")
+
+    // var user = document.querySelector('#user').value;
+    // var pass = document.querySelector('#pass').value;
+    // console.log(user)
+   
+   
+    // if (user === "" || pass === "") {
+    //     alert("Campos no pueden estar vacíos ")
+    // }else if (user !== root.user || pass !== root.pass) {
+    //     alert('usuario o contraseña no existen')
+    // }else{
+    //     alert('bienvenido')
+    // }
+        
+    
+// })
