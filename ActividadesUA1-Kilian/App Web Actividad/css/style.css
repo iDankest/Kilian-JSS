@@ -185,7 +185,7 @@ h2{
 }
 .ui-accordion-content{
     color: #fff;
-    background-color: black;
+    background-color: rgba(136, 116, 116, 0.577);
 }
 .contenido{
     display: flex;

@@ -23,6 +23,13 @@ $(document).ready(function () {
     Equipo CursosExcelencia</h3>
 
     `);
+    const root = {
+        user: 'Admin',
+        pass: '123456',
+        info: 'Usuario administrador',
+        profeinfo: 'Root',
+        logros: 'El Poder'
+    }
     $('#acc').on('click', function () { 
    
     $('#contenido').html(`
@@ -39,32 +46,74 @@ $(document).ready(function () {
     </form>
     <p id="verificar"></p>
 </div>`);
-$("#form_acceder").submit(function (e) { 
-    e.preventDefault();
+// $("#form_acceder").submit(function (e) { 
+//     e.preventDefault();
 
-    var user = $("#user").val()
-    var pass = $("#pass").val()
+//     var user = $("#user").val()
+//     var pass = $("#pass").val()
 
    
+//     if (user === "" || pass === "") {
+//         $('#verificar').html("Campos vacíos");
+//         }else if (user !== root.user || pass !== root.pass) {
+//         $('#verificar').html("Usuario no encontrado");
+//         }else{
+//         $('#verificar').html("");
+
+//         localStorage.setItem('loggedIn', 'true');
+//         }
+//         var usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+//         var usuarioEncontrado = usuariosRegistrados.find(function (usuario) {
+//             return usuario.user === user && usuario.pass === pass;
+//         });
+    
+//         if (usuarioEncontrado) {
+//             // El usuario ha iniciado sesión correctamente
+//             localStorage.setItem('loggedIn', 'true');
+//             // Redireccionar o mostrar información
+//         } else {
+//             $('#verificar').html("Usuario no encontrado");
+//         }
+// });
+$("#form_acceder").submit(function (e) {
+    e.preventDefault();
+    var user = $("#user").val();
+    var pass = $("#pass").val();
+
     if (user === "" || pass === "") {
         $('#verificar').html("Campos vacíos");
-        }else if (user !== root.user || pass !== root.pass) {
-        $('#verificar').html("Usuario no encontrado");
-        }else{
-        $('#verificar').html("");
-        $("#usuario").html(`<p>Usuario: ${user}</p>`)
-        $("#user_info").html(`<p>Info: ${root.info}</p>`)
-        $("#profeinfo").html(`<p>Profesor: ${root.profeinfo}</p>`)
-        $("#logro").html(`<p>Logros: ${root.logros}</p>`)
-        $("#confi").html(`<p>Accesibilidad</p>`)
-        }
         
+    } else {
+        var usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+        var usuarioEncontrado = usuariosRegistrados.find(function (usuario) {
+            return usuario.codigo === pass && usuario.user === user;
+        });
+
+        if (usuarioEncontrado) {
+            $('#verificar').html("");
+            localStorage.setItem('loggedIn', 'true');
+            console.log("Dentro")
+        } else {
+            $('#verificar').html("Usuario no encontrado");
+        }
+    }
 });
+
         $('footer').addClass('active');
-    
-    
-    
     });
+    if (localStorage.getItem('loggedIn') === 'true') {
+        $("#usuario").html(`<p>Usuario: ${root.user}</p>`);
+        $("#user_info").html(`<p>Info: ${root.info}</p>`);
+        $("#profeinfo").html(`<p>Profesor: ${root.profeinfo}</p>`);
+        $("#logro").html(`<p>Logros: ${root.logros}</p>`);
+        $("#confi").html(`<p>Accesibilidad</p>`);
+    } else {
+        console.log('Usuario no autenticado');
+    }
+    
+  
     $('#registro').on('click', function(){
         $('#contenido').html(`
         <div class="contenido_form2">
@@ -92,7 +141,41 @@ $("#form_acceder").submit(function (e) {
         </form>
     </div>
         `);
+        $('#formulario').submit(function(e){
+            e.preventDefault();
+
+            var codigo = $('#codigo').val();
+            var nombre = $('#nombre').val();
+            var apellido = $('#Apellidos').val();
+            var email = $('#Correo').val();
+            var edad = $('#Edad').val();
+            var foto = $('#Foto').val();
+
+            userData = {
+                codigo: codigo,
+                nombre: nombre,
+                apellido: apellido,
+                edad: edad,
+                email: email,
+                foto: foto
+            }
+            $.ajax({
+                type: "POST",
+                url: "https://reqres.in/api/users",
+                data: userData,
+                dataType: "json",
+                success: function (response) {
+                    console.log(response)
+                },
+                error: function(error){
+                    console.error('A ocurrido un error', error);
+                }
+            });
+            localStorage.setItem('usuarios', JSON.stringify([userData]));
+        })
+    
     })
+
     $('#curso').on('click', function () {
         $('#contenido').html(`
         <h2>CURSOS</h2>
@@ -151,13 +234,25 @@ $("#form_acceder").submit(function (e) {
     // $('.comotal').on('mouseleave', function() {
     //     $('.comotal').accordion("option", "active", false);
     // })
-    
-    const root = {
-        user: 'Admin',
-        pass: '123456',
-        info: 'Usuario administrador',
-        profeinfo: 'Root',
-        logros: 'El Poder'
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
     }
+
+    $('#Colores').on('click', function () {
+        var randomColor = getRandomColor();
+        $('body').css('backgroundColor', randomColor)
+        $('#confi').html(randomColor)
+        
+    });
+
+    $('.logo').on('click', function () {
+        location.reload();
+    });
+
 
 });
