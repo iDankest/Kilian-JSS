@@ -39,7 +39,31 @@ $(document).ready(function () {
     </form>
     <p id="verificar"></p>
 </div>`);
+$("#form_acceder").submit(function (e) { 
+    e.preventDefault();
+
+    var user = $("#user").val()
+    var pass = $("#pass").val()
+
+   
+    if (user === "" || pass === "") {
+        $('#verificar').html("Campos vacíos");
+        }else if (user !== root.user || pass !== root.pass) {
+        $('#verificar').html("Usuario no encontrado");
+        }else{
+        $('#verificar').html("");
+        $("#usuario").html(`<p>Usuario: ${user}</p>`)
+        $("#user_info").html(`<p>Info: ${root.info}</p>`)
+        $("#profeinfo").html(`<p>Profesor: ${root.profeinfo}</p>`)
+        $("#logro").html(`<p>Logros: ${root.logros}</p>`)
+        $("#confi").html(`<p>Accesibilidad</p>`)
+        }
+        
+});
         $('footer').addClass('active');
+    
+    
+    
     });
     $('#registro').on('click', function(){
         $('#contenido').html(`
@@ -121,70 +145,19 @@ $(document).ready(function () {
         collapsible: true,
         active: false,
         icons:{header:"ui-icon-caret-1-s", activeHeader:"ui-icon-caret-1-n"},
-        animate: 1500,
-        event: "mouseover"
+        animate: 500,
+        // event: "mouseover"
     })
-    $('.comotal').on('mouseleave', function() {
-        $('.comotal').accordion("option", "active", false);
-    })
+    // $('.comotal').on('mouseleave', function() {
+    //     $('.comotal').accordion("option", "active", false);
+    // })
     
     const root = {
         user: 'Admin',
-        pass: '123456'
+        pass: '123456',
+        info: 'Usuario administrador',
+        profeinfo: 'Root',
+        logros: 'El Poder'
     }
-    // $('#miformulario').submit(function (e) { 
-    //     e.preventDefault();
-    //     let user, pass;
-    //     user = $('#user').val();
-    //     pass = $('#pass').val();
-    //     console.log('funciona')
-    //     if (user === "" || pass === "") {
-    //         console.log('funciona2')
-    //         $('#verificar').text('Los campos estan vacios')
-    //     }
-    // });
-    
-    
-    $("#enviar").on('submit', function (e) { 
-        e.preventDefault();
-
-        var user = $("#user").val()
-        var pass = $("#pass").val()
-
-       
-        if (user === "" || pass === "") {
-                alert("Campos no pueden estar vacíos ")
-            }else if (user !== root.user || pass !== root.pass) {
-                alert('usuario o contraseña no existen')
-            }else{
-                alert('bienvenido')
-                $("#usuario").append(`<p>${user}</p>`)
-            }
-            
-    });
-    
-
-    
 
 });
-    // var botonenviar = document.querySelector("#enviar")
-    
-    // botonenviar.addEventListener('click', function (event) {
-    // event = preventDefault();
-    // console.log("Me has pulsado")
-
-    // var user = document.querySelector('#user').value;
-    // var pass = document.querySelector('#pass').value;
-    // console.log(user)
-   
-   
-    // if (user === "" || pass === "") {
-    //     alert("Campos no pueden estar vacíos ")
-    // }else if (user !== root.user || pass !== root.pass) {
-    //     alert('usuario o contraseña no existen')
-    // }else{
-    //     alert('bienvenido')
-    // }
-        
-    
-// })

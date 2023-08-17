@@ -22,17 +22,13 @@ window.addEventListener("load", function(){
 
     Equipo CursosExcelencia</h3>
     `
-    const expresiones = {
-        usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, números, guion y guion_bajo
-        nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-        password: /^.{4,12}$/, // 4 a 12 dígitos.
-        correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-        telefono: /^\d{7,14}$/ // 7 a 14 números.
-    }
 
     const root = {
         user: 'Admin',
-        pass: '123456'
+        pass: '123456',
+        info: 'Usuario administrador',
+        profeinfo: 'Root',
+        logros: 'El Poder'
     }
 
     document.querySelector('#acc').addEventListener('click', function(){
@@ -50,28 +46,27 @@ window.addEventListener("load", function(){
     </form>
     <p id="verificar"></p>
     </div>
-        `
-    })
-        var user, pass;
-        user = document.querySelector('[name=user]')
-        pass = document.querySelector('[name=pass]')
-        valid = document.querySelector("#verificar")
-    document.querySelector('.contenido_form').addEventListener('submit', function(e){
-        e = preventDefault();
-        let entrar = false;
-        let aviso = ""
-      /*   if (user === "" || pass === "") {
-            alert("campos vacíos")
-        }else if (user !== root.user || pass !== root.pass){
-            alert('usuario o contraseña no validos')
-        }else{
-            alert('bienvenido')
-        } */
-        if(!expresiones.usuario.test(user.value)){
-            aviso +=`El nombre no es valido <br>`
-            entrar = true
-        }if(entrar){
-            valid.innerHTML = aviso
-        }
-    })
+        `;
+var form_acc = document.querySelector('#form_acceder');
+form_acc.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    var userValue = form_acc.querySelector('#user').value;
+    var passValue = form_acc.querySelector('#pass').value;
+
+
+    if (userValue === "" || passValue === "") {
+        $('#verificar').html("Campos vacíos");
+    } else if (userValue !== root.user || passValue !== root.pass){
+        $('#verificar').html("Usuario no encontrado");
+    } else {
+        $('#verificar').html("");
+        $("#usuario").html(`<p>Usuario: ${userValue}</p>`)
+        $("#user_info").html(`<p>Info: ${root.info}</p>`)
+        $("#profeinfo").html(`<p>Profesor: ${root.profeinfo}</p>`)
+        $("#logro").html(`<p>Logros: ${root.logros}</p>`)
+        $("#confi").html(`<p>Accesibilidad</p>`)
+    }
+});
+});
 });

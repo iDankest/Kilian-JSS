@@ -200,3 +200,7 @@ h2{
     align-items: center;
     gap: 10%;
 }
+#verificar{
+    text-align: center;
+    color: rgb(238, 255, 0);
+}
