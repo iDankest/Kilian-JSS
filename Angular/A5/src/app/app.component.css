@@ -1,0 +1,26 @@
+:root{
+    --color1:   #cdeae8;
+    --color2:   #0d3f7c;
+    --color3:   #00214A;
+    --color4:   #04bbec;
+    --color5:   #ea25b5;
+    --color6:   #ff82f4;
+    
+
+}
+header{
+    background-color: aqua;
+    
+}
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    justify-content: center;
+}
+footer{
+    bottom: 0;
+    position: absolute; 
+    background-color: aquamarine;
+    width: 98%;
+}
