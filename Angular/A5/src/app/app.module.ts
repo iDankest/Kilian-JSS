@@ -11,6 +11,7 @@ import { ProfesorComponent } from './profesor/profesor.component';
 import { AccesoComponent } from './acceso/acceso.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ConsultaComponent } from './consulta/consulta.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ConsultaComponent } from './consulta/consulta.component';
     ConsultaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

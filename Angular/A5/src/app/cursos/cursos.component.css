@@ -1,0 +1,17 @@
+.cursosstyle{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+    justify-content: center;
+}
+.cursosstyle img{
+    width: 50vh;
+    height: 25vh;
+    border-radius: 10px;
+    transition: transform 1s
+}
+.cursosstyle img:hover {
+    transform: scale(0.8);
+    transition: transform 1s;
+    cursor: pointer;
+}

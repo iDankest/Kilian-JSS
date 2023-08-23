@@ -1,16 +1,14 @@
 :root{
-    --color1:   #cdeae8;
-    --color2:   #0d3f7c;
-    --color3:   #00214A;
-    --color4:   #04bbec;
-    --color5:   #ea25b5;
-    --color6:   #ff82f4;
-    
-
+    --color1: #cdeae8;
+    --color2:#0d3f7c;
+    --color3:#00214A;
+    --color4:#04bbec;
+    --color5:#ea25b5;
+    --color6:#ff82f4;
 }
 header{
     background-color: aqua;
-    
+    color: black;
 }
 header ul{
     display: flex;
@@ -20,7 +18,12 @@ header ul{
 }
 footer{
     bottom: 0;
-    position: absolute; 
+    position: relative; 
     background-color: aquamarine;
     width: 98%;
+    color: black;
+}
+body{
+    background-color: rgba(73, 50, 50, 0.616);
+    color: wheat;
 }

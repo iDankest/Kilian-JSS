@@ -1,1 +1,19 @@
 <p>cursos works!</p>
+<!-- [ng-template] -->
+<div *ngIf="registrado; then Siregistrado else Noregistrado"></div>
+<ng-template #Siregistrado>
+    <p>Estas registrado</p>
+    <button (click)="unsetRegistrado()">Muere</button>
+</ng-template>
+<ng-template #Noregistrado>
+    <p>No estas registrado</p>
+    <button (click)="setRegistrado()">Identificate</button>
+</ng-template>
+<input type="number" [(ngModel)]="Nota">
+<p>{{Nota}}</p>
+<p (click)="aumentarNota()">aumenta nota</p>
+<div class="cursosstyle">
+<div *ngFor="let curso of cursosA">
+   <img src="{{curso.imagenC}}" alt="{{curso.nombreC}}"> 
+</div>
+</div>

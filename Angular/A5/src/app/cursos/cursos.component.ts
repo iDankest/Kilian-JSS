@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { profesorBase } from '../Models/alumnos';
 import { alumnosBD } from '../Models/alumnos';
+import { cursosBD } from '../Models/cursos';
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
@@ -14,8 +15,18 @@ export class CursosComponent implements OnInit{
   public listado: string
   public imagen: string
   public notaAlumno: number
-
+  public registrado: boolean
+  public Nota: number
+  public cursosA:Array<cursosBD>
   constructor(){
+    this.cursosA=[
+      new cursosBD('HTML','Mañana', 420, true, '../assets/html.png'),
+      new cursosBD('CSS','Tarde', 420, true, './assets/css.png'),
+      new cursosBD('JavaScript','Tarde', 420, true, './assets/javascript.jpg'),
+      new cursosBD('Python','Mañana', 420, true, './assets/python.png'),
+    ]
+    this.Nota = 0
+    this.registrado=false
     this.notaAlumno=4
     this.nombreProfesor = profesorBase.nombre
     this.fotoProfesor = profesorBase.foto
@@ -34,5 +45,14 @@ export class CursosComponent implements OnInit{
   }
   cambiarTitulo(){
     this.nombre= "Programacion en angular"
+  }
+  setRegistrado(){
+    this.registrado = true
+  }
+  unsetRegistrado(){
+    this.registrado = false
+  }
+  aumentarNota() {
+    this.Nota += 5;
   }
 }
