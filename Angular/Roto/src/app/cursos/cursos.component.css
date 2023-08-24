@@ -1,0 +1,9 @@
+.cursos{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+    justify-content: center;
+}
+.cursos img{
+    width: 35vh;
+}

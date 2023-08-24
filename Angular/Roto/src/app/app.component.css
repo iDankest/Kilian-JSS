@@ -1,0 +1,12 @@
+
+.amistad{
+    height: 88vh;
+    width: 99vw;
+    background-color: var(--color1);
+    
+}
+header ul{
+    display: flex;
+    gap: 2em;
+    list-style: none;
+}
