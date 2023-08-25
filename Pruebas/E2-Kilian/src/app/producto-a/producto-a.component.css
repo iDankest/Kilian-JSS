@@ -1,0 +1,27 @@
+
+section{
+    /* height: 70vh; */
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+div video{
+    height: 20vh;
+    border-radius: 10px;
+}
+.arriba{
+    margin-top: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+h4:last-child{
+    color: blue;
+}
+h4:hover{
+    color: rgba(0, 0, 255, 0.486);
+    cursor: pointer;
+}

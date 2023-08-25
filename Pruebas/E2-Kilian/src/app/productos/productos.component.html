@@ -1,0 +1,15 @@
+
+    <div class="arriba"><h4 routerLink="/producto">Estaticos</h4><h4 routerLink="/productoA">Animados</h4></div>
+<section>
+    <section>
+        <div *ngFor="let lista of productosgalery; let i = index">
+          <img src="{{lista.imgP}}" alt="" (click)="abrirModal(i)">
+          <div class="modal" [ngStyle]="{'display': modalVisible[i] ? 'block' : 'none' }">
+            <h1>Diseño estatico {{lista.idP}}</h1>
+            <img src="{{lista.imgP}}" alt="">
+            <p>{{lista.desP}}</p>
+            <button (click)="cerrarModal(i)">Cerrar</button>
+          </div>
+        </div>
+      </section>
+

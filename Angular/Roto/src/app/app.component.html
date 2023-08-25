@@ -1,15 +1,15 @@
 
   <header>
     <ul>
-      <li>Acceso</li>
-      <li>Cursos</li>
-      <li>Alumno</li>
-      <li>Profesores</li>
+      <button (click)="Ir('')">Acceso</button>
+      <button (click)="Ir('cursos')">Cursos</button>
+      <button (click)="Ir('alumnos')">Alumno</button>
+      <button (click)="Ir('profe')">Profesores</button>
     </ul>
   </header>
-
   <div class="amistad">
     <app-alumnos></app-alumnos>
+    <router-outlet></router-outlet>
     <app-cursos></app-cursos>
   </div>
 

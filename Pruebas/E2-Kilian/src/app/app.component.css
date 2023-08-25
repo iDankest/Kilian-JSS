@@ -1,0 +1,28 @@
+/* .main{
+    height: 80vh;
+} */
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 0.5em;
+}
+header li:hover{
+    cursor: pointer;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: brown;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: brown;
+    height: 5vh;
+    width: 99%;
+    bottom: 0;
+    position: absolute;
+}

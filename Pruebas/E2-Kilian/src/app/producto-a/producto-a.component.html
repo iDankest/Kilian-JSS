@@ -1,0 +1,6 @@
+<div class="arriba"><h4 routerLink="/producto">Estaticos</h4><h4 routerLink="/productoA">Animados</h4></div>
+<section>
+    <div *ngFor="let listado of productosgaleryv">
+        <video controls src="{{listado.imgP}}"></video>
+    </div>
+</section>
