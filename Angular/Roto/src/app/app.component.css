@@ -1,12 +1,26 @@
 
-.amistad{
-    height: 88vh;
-    width: 99vw;
-    background-color: var(--color1);
-    
-}
-header ul{
+header{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 2em;
-    list-style: none;
+    background-color: var(--color4);
+}
+
+footer{
+    background-color: var(--color2);
+}
+footer p{
+    color: var(--color6);
+}
+button{
+    color: var(--color3);
+    border: none;
+    background-color: rgba(0, 255, 255, 0);
+}
+button:hover{
+    color: var(--color5);
+}
+header img{
+    width: 5vw;
 }

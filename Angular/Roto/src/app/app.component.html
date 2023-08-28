@@ -1,17 +1,19 @@
 
   <header>
-    <ul>
-      <button (click)="Ir('')">Acceso</button>
+    
+      <img (click)="Ir('')" src="{{logo}}" alt="">
+      <div>
+      <button (click)="Ir('acceso')">Acceso</button>
       <button (click)="Ir('cursos')">Cursos</button>
       <button (click)="Ir('alumnos')">Alumno</button>
       <button (click)="Ir('profe')">Profesores</button>
-    </ul>
+    </div>
+    <img src="../assets/Diseño_sin_título__1_-removebg-preview.png" alt="">
+    
   </header>
-  <div class="amistad">
-    <app-alumnos></app-alumnos>
+  
     <router-outlet></router-outlet>
-    <app-cursos></app-cursos>
-  </div>
+  
 
   <footer>
     <p>Info legal</p>

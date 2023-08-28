@@ -7,6 +7,10 @@ import { ProfesoresComponent } from './profesores/profesores.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { InicioComponent } from './inicio/inicio.component';
+import { AccesoComponent } from './acceso/acceso.component';
+import { RegistroComponent } from './registro/registro.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +18,10 @@ import { AppRoutingModule } from './app-routing.module';
     CursosComponent,
     ProfesoresComponent,
     AlumnosComponent,
+    InicioComponent,
+    AccesoComponent,
+    RegistroComponent,
+    ContactoComponent,
   ],
   imports: [
     BrowserModule,

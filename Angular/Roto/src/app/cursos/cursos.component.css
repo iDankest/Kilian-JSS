@@ -2,8 +2,14 @@
     display: grid;
     grid-template-columns: auto auto;
     gap: 1em;
+    height: var(--mainh);
+    width: 99vw;
+    background-color: var(--color1);
     justify-content: center;
+    align-items: center;
 }
-.cursos img{
-    width: 35vh;
+div img{
+    width: 30vw;
+    height: 30vh;
+
 }

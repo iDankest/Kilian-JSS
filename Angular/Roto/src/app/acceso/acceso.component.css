@@ -1,0 +1,28 @@
+main{
+    height: var(--mainh);
+    width: 99vw;
+    background-color: var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenido_form label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+.contenido_form form{
+    display: grid;
+    grid-column: auto;
+    gap: 1em;
+}
+.contenido_form{
+    border-radius: 10%;
+    border: 5px black solid;
+    background-color: rgb(5, 86, 86);
+    width: 250px;
+    padding: 2.5em;
+}
+.contenido_form input{
+    height: 2em;
+}

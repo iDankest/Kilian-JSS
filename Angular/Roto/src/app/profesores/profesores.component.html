@@ -1,1 +1,7 @@
-<p>profesores works!</p>
+<main>
+    <ol>
+        <li *ngFor="let listado of profeAll">
+            {{listado.nombreP}} {{listado.apellidoP}} con correo {{listado.correoP}} campo {{listado.expP}}
+        </li>
+    </ol>
+</main>

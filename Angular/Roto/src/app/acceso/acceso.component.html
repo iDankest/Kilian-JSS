@@ -1,0 +1,19 @@
+ <main>
+ <div class="contenido_form">
+    <h2>Login</h2>
+    <form id="form_acceder">
+        <label for="user">
+            Usuario: <input type="text" id="user" name="user" [(ngModel)]="user">
+        </label>
+        <label for="pass">
+            Contraseña: <input type="password" id="pass" name="pass" [(ngModel)]="pass">
+        </label>
+        <input id='enviar' type="submit" value="Enviar">
+    </form>
+    <p id="verificar"></p>
+    <p routerLink="/registro">No tienes cuenta</p>
+<p routerLink="/contacto">Problemas, haga click aqui y manda solicitud</p>
+</div>
+<div class="robo"></div>
+<p>{{pass}} {{user}}</p>
+</main>

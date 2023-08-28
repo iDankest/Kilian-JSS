@@ -7,8 +7,11 @@ import { Router } from '@angular/router'
 })
 export class AppComponent {
   title = 'Roto';
+  public logo: string = '../assets/logo.png';
+  // public accimg: string;
   constructor(private router: Router){}
   Ir(url:string): void{
     this.router.navigate([url]);
   }
+ 
 }
