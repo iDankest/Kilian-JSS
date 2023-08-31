@@ -8,6 +8,9 @@ import { ProductosComponent } from './productos/productos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ProductoAComponent } from './producto-a/producto-a.component';
 import { RegistroComponent } from './registro/registro.component';
+import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
+import { GestionServiciosComponent } from './gestion-servicios/gestion-servicios.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { RegistroComponent } from './registro/registro.component';
     ProductosComponent,
     ContactoComponent,
     ProductoAComponent,
-    RegistroComponent
+    RegistroComponent,
+    ListaServiciosComponent,
+    GestionServiciosComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
