@@ -11,6 +11,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { AccesoComponent } from './acceso/acceso.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { CabeceraComponent } from './cabecera/cabecera.component';
+import { PieComponent } from './pie/pie.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     AccesoComponent,
     RegistroComponent,
     ContactoComponent,
+    CabeceraComponent,
+    PieComponent,
   ],
   imports: [
     BrowserModule,
