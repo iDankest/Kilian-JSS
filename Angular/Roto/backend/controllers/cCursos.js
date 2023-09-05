@@ -1,1 +1,1 @@
-res.send({data: 'Esto viene de Rutas'})
+// res.send({data: 'Esto viene de Rutas'})

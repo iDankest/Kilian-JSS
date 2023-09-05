@@ -1,0 +1,31 @@
+[
+    {
+        "nameC": "HTML",
+        "timeC": 420,
+        "imagenC": "../assets/html.png",
+        "docenteC": "Antonio",
+        "descripC":"HTML Basico"
+      },
+    {
+        "nameC": "CSS",
+        "timeC": 420,
+        "imagenC": "../assets/css.png",
+        "docenteC": "Antonio",
+        "descripC":"CSS Basico"
+      },
+    {
+        "nameC": "JavaScript",
+        "timeC": 420,
+        "imagenC": "../assets/javascript.jpg",
+        "docenteC": "Antonio",
+        "descripC":"JavaScript Basico"
+      },
+    {
+        "nameC": "Python",
+        "timeC": 420,
+        "imagenC": "../assets/python.png",
+        "docenteC": "Antonio",
+        "descripC":"Python Basico"
+      }
+
+]

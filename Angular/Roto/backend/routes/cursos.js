@@ -5,8 +5,6 @@ const router = express.Router()
 
 const path = 'cursos'
 
-router.get(`
-/${path}
-`, controller.getData)
+router.get(`/${path}`, controller.getData)
 
 module.exports = router
