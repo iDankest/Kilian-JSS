@@ -1,0 +1,12 @@
+const express = require('express')
+
+const controller = require('../controllers/cCursos')
+const router = express.Router()
+
+const path = 'user'
+
+router.get(`
+/${path}
+`, cotroller.getData)
+
+module.exports = router
