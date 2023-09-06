@@ -1,6 +1,7 @@
 // res.send({data: 'Esto viene de Rutas'})
 const model = require('../models/mUser')
-
+const fs = require('fs');
+const path = require('path');
 const controller = {
     home: function(req, res){
         return res.status(200).send({

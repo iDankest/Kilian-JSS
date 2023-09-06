@@ -9,7 +9,7 @@ const port = 3700
 app.listen(port, ()=>{
     console.log('La aplicacion esta en linea')
 })
-// const userRouters = require('./routes/user')
+const userRouters = require('./routes/user')
 
 // app.get('/', (req, res)=>{
 //     res.send({
@@ -17,7 +17,7 @@ app.listen(port, ()=>{
 //     })
 // })
 
-// app.use(userRouters)
+app.use(userRouters)
 
 // app.listen(port, ()=>{
 //     console.log('En linea')
