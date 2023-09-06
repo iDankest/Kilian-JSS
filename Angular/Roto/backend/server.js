@@ -10,6 +10,7 @@ app.listen(port, ()=>{
     console.log('La aplicacion esta en linea')
 })
 const userRouters = require('./routes/user')
+const CursosRouters = require('./routes/cursos')
 
 // app.get('/', (req, res)=>{
 //     res.send({
@@ -18,6 +19,9 @@ const userRouters = require('./routes/user')
 // })
 
 app.use(userRouters)
+
+app.use(CursosRouters)
+
 
 // app.listen(port, ()=>{
 //     console.log('En linea')

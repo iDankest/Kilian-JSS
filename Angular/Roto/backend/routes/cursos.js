@@ -12,7 +12,7 @@ const express = require('express')
 const CursosController = require('../controllers/cCursos')
 const router = express.Router()
 
-router.get('/home', CursosController.home);
+router.get('/homec', CursosController.homec);
 router.get('/test', CursosController.test);
 router.post('/save-curso', CursosController.saveCurso);
 router.get('/curso/:id?', CursosController.getCurso);

@@ -1,10 +1,10 @@
 // res.send({data: 'Esto viene de Rutas'})
 // res.send({data: 'Esto viene de Rutas'})
-const model = require('../models/mCursos')
+const Model = require('../models/mCursos')
 const fs = require('fs');
 const path = require('path');
 const controller = {
-    home: function(req, res){
+    homec: function(req, res){
         return res.status(200).send({
             message: 'Soy la home'
         });
@@ -32,7 +32,7 @@ const controller = {
         var cursoId = req.params.id;
         if(cursoId==null) return res.status(404).send({menssage:'El curso no existe'})
         
-        Curso.findById(cursoID, (err, curso)=>{
+        User.findById(cursoID, (err, curso)=>{
             if(err) return res.status(500).send({menssage: 'error al devolver los datos'});
             if(!curso) return res.status(404).send({mensaje: 'el curso no existe'});     
             return res.status(200).send({
@@ -41,7 +41,7 @@ const controller = {
         })
     },
     getCursos: function(req, res){
-        Curso.find({}).sort('-year').exec((err, cursos)=>{
+        User.find({}).sort('-year').exec((err, cursos)=>{
             if(err) return res.status(500).send({message: 'error al devolver datos'});
             if(!projects) return res.status(404).send({menssage: 'no hay curso que mostrar'});
             return res.status(200).send({project});
@@ -50,7 +50,7 @@ const controller = {
     updateCurso: function(req, res){
         var cursoId = req.params.id;
         var update = res.body;
-        Curso.findBuIdAndUpdate(cursoId, update, {new:true}, (err, cursoUpdated)=>{
+        User.findBuIdAndUpdate(cursoId, update, {new:true}, (err, cursoUpdated)=>{
             if(err) return res.status(500).send({message: 'Error al actualizar'});
             if(!cursoUpdated) return res.status(404).send({menssage: 'no existe el curso para actualizar'});
             return res.status(200).send({
@@ -60,7 +60,7 @@ const controller = {
     },
     deleteCurso: function(req, res){
         var cursoId = req.params.id;
-        Curso.findByIdAndRemove(cursoId,(err, cursoRemoved)=>{
+        User.findByIdAndRemove(cursoId,(err, cursoRemoved)=>{
             if(err) return res.status(500).send({message: 'no se ha podido borrar el curso'});
             if(!cursoRemoved) return res.status(404).send({message: ' no se puede eliminar ese curso'});
             return res.status(200).send({
