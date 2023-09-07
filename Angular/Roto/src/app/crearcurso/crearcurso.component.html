@@ -12,7 +12,7 @@
     </p>
     <p>
       <label for="descriptio">descriptio</label>
-      <textarea type="text" id="descriptio" name="descriptio" #descriptio="ngModel" [(ngModel)]="curso.descriptio" required>
+      <textarea type="text" id="descriptio" name="descriptio" #descriptio="ngModel" [(ngModel)]="curso.descriptio" required></textarea>
       <span class="form_error" *ngIf="descriptio.touched && !descriptio.valid">El Nombre es obligatorio</span>
     </p>
     <p>
@@ -30,6 +30,6 @@
       <input type="text" id="temas" name="temas" #temas="ngModel" [(ngModel)]="curso.temas" required>
       <span class="form_error" *ngIf="temas.touched && !temas.valid">El Nombre es obligatorio</span>
     </p>
-    <input type="submit" value="Enviar" [disable]="!cursoForm.form.valid">
+    <input type="submit" value="Enviar" [disabled]="!cursoForm.form.valid">
   </form>
 </div>
