@@ -1,0 +1,19 @@
+button{
+    color: var(--color3);
+    border: none;
+    background-color: rgba(0, 255, 255, 0);
+}
+button:hover{
+    color: var(--color5);
+}
+header img{
+    width: 5vw;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    background-color: var(--color4);
+}
