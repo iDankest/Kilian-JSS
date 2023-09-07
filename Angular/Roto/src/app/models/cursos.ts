@@ -1,9 +1,12 @@
 export class cursosDB{
+    static _id: string;
     constructor(
-        public nameC: string,
-        public timeC: number,
-        public imagenC: string,
-        public docenteC: string,
-        public descripC: string
+        public _id: string,
+        public name: string,
+        public descriptio: string,
+        public category: string,
+        public duracion: number,
+        public temas: string,
+        public image: string
     ){}
 }
