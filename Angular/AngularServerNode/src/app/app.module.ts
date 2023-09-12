@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthModule } from '@auth0/auth0-angular';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 // Components
 import { AppComponent } from './app.component';
@@ -24,6 +25,9 @@ import { CrearCursoComponent } from './crear-curso/crear-curso.component';
 import { ListarCursoComponent } from './listar-curso/listar-curso.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TareasComponent } from './tareas/tareas.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CursosComponent,
     CursoComponent,
     AlumnosComponent,
-    AlumnoComponent,
+    // AlumnoComponent,
     ProfesorComponent,
     ProfesoresComponent,
     AccesoComponent,
@@ -41,9 +45,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CrearCursoComponent,
     ListarCursoComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    // TareasComponent
   ],
   imports: [
+    MatMenuModule,
+    
+    MatCardModule,
+    TareasComponent,
+    DragDropModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

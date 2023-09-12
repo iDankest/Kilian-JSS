@@ -13,6 +13,8 @@ import { RegistroComponent } from './registro/registro.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CrearCursoComponent } from './crear-curso/crear-curso.component';
 import { ListarCursoComponent } from './listar-curso/listar-curso.component';
+import { TareasComponent } from './tareas/tareas.component';
+import { HeaderComponent } from './header/header.component';
 
 
 const routes: Routes = [
@@ -28,7 +30,9 @@ const routes: Routes = [
   {path: 'crearCurso', component: CrearCursoComponent},
   {path: 'editarCurso/:id', component: CrearCursoComponent},
   {path: 'listado', component: ListarCursoComponent},
-
+  {path: 'tata', component: TareasComponent},
+  {path: '', component: HeaderComponent},
+  
   {path: '**', redirectTo: '',pathMatch:'full'}
 ];
 
