@@ -27,6 +27,13 @@ import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TareasComponent } from './tareas/tareas.component';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+
+
 
 @NgModule({
   declarations: [
@@ -48,6 +55,11 @@ import {MatMenuModule} from '@angular/material/menu';
     TareasComponent
   ],
   imports: [
+    MatButtonModule,
+    MatIconModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule,
     MatMenuModule,
     DragDropModule,
     BrowserModule,

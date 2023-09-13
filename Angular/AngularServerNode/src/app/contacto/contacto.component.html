@@ -1,1 +1,16 @@
-<p>contacto works!</p>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Asunto</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <!-- <div class="example-container"> -->
+    <mat-form-field appearance="fill">
+      <mat-label>Correo</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  <!-- </div> -->
+  <mat-form-field appearance="fill">
+    <mat-label>Contenido</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
