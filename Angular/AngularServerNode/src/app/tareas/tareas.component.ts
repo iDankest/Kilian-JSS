@@ -24,5 +24,4 @@ export class TareasComponent {
       );
     }
   }
-  hide =true
 }
