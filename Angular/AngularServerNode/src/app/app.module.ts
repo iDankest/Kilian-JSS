@@ -26,7 +26,6 @@ import { ListarCursoComponent } from './listar-curso/listar-curso.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TareasComponent } from './tareas/tareas.component';
-import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
@@ -35,7 +34,7 @@ import {MatMenuModule} from '@angular/material/menu';
     CursosComponent,
     CursoComponent,
     AlumnosComponent,
-    // AlumnoComponent,
+    AlumnoComponent,
     ProfesorComponent,
     ProfesoresComponent,
     AccesoComponent,
@@ -46,13 +45,10 @@ import {MatMenuModule} from '@angular/material/menu';
     ListarCursoComponent,
     HeaderComponent,
     DashboardComponent,
-    // TareasComponent
+    TareasComponent
   ],
   imports: [
     MatMenuModule,
-    
-    MatCardModule,
-    TareasComponent,
     DragDropModule,
     BrowserModule,
     AppRoutingModule,
