@@ -24,7 +24,7 @@
                             <td>{{curso.temas}}</td>
                             <td><i [routerLink]="['/editarCurso', curso._id]"class="fa-solid fa-pen-to-square text-primary"></i></td>
                             <td><i (click)="eliminarCurso(curso._id)"class="fa-solid fa-trash text-danger"></i></td>
-                            <td></td>
+                            <td><button (click)="openDialog()">Open dialog</button></td>
                           </tr>
                         </tbody>
                       </table>
