@@ -32,6 +32,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {CdkListboxModule} from '@angular/cdk/listbox';
+import {DialogModule} from '@angular/cdk/dialog';
+
 
 
 
@@ -55,6 +59,9 @@ import {MatButtonModule} from '@angular/material/button';
     TareasComponent
   ],
   imports: [
+    DialogModule,
+    CdkListboxModule,
+    MatGridListModule,
     MatButtonModule,
     MatIconModule,
     MatSelectModule,

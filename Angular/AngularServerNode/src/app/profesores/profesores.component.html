@@ -1,1 +1,17 @@
-<p>profesores works!</p>
+<mat-grid-list cols="2" rowHeight="2:2">
+    <mat-grid-tile><div class="example-listbox-container">
+        <label class="example-listbox-label" id="example-fav-color-label">
+          Profesores
+        </label>
+        <ul cdkListbox
+            aria-labelledby="example-fav-color-label"
+            class="example-listbox">
+          <li cdkOption="red" class="example-option">Red</li>
+          <li cdkOption="green" class="example-option">Green</li>
+          <li cdkOption="blue" class="example-option">Blue</li>
+        </ul>
+      </div></mat-grid-tile>
+    <mat-grid-tile><div *ngFor="let profesor of profesores">
+        {{profesor.nombre}} {{profesor.apellido}}
+    </div></mat-grid-tile>
+  </mat-grid-list>

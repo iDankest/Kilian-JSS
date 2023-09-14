@@ -8,9 +8,9 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
   styleUrls: ['./tareas.component.css'],
 })
 export class TareasComponent {
-  items = ['Carrots', 'Tomatoes', 'Onions', 'Apples', 'Avocados'];
+  items = ['Carrots', 'Tomatoes', 'Onions', 'Apples', 'Avocados','Oranges', 'Bananas', 'Cucumbers'];
 
-  basket = ['Oranges', 'Bananas', 'Cucumbers'];
+  basket : string[] = [];
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
