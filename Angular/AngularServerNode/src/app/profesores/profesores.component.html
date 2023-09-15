@@ -4,14 +4,18 @@
           Profesores
         </label>
         <ul cdkListbox
-            aria-labelledby="example-fav-color-label"
-            class="example-listbox">
-          <li cdkOption="red" class="example-option">Red</li>
-          <li cdkOption="green" class="example-option">Green</li>
-          <li cdkOption="blue" class="example-option">Blue</li>
-        </ul>
+        aria-labelledby="example-fav-color-label"
+        class="example-listbox" 
+        (cdkSelectedChange)="cdkSelectedChange($event)">
+      <li class="example-option" *ngFor="let profesor of profesores" [cdkOption]="profesor._id">{{profesor.nameP}}</li>
+    </ul>
+    
+    
       </div></mat-grid-tile>
-    <mat-grid-tile><div *ngFor="let profesor of profesores">
-        {{profesor.nombre}} {{profesor.apellido}}
-    </div></mat-grid-tile>
+      <mat-grid-tile>
+        <div *ngIf="selectedProfesor">
+          <h2>{{ selectedProfesor.nameP }}</h2>
+          <p>Foto: <img [src]="selectedProfesor.imgP" alt="{{ selectedProfesor.nameP }}"/></p>
+        </div>
+      </mat-grid-tile>
   </mat-grid-list>
