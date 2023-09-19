@@ -10,7 +10,7 @@ exports.crearUsuario = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
-exports.obtenerUsuario = async (req, res) => {
+exports.obtenerUsuarios = async (req, res) => {
     try {
         let usuario = await Usuario.find();
         res.json(usuario)
@@ -40,9 +40,26 @@ exports.actualizarUsuario = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
+exports.obtenerUsuario = async (req, res) => {
+    try {
+        let usuario = await Usuario.findById(req.params.id);
+        if(!usuario){
+            res.status(404).json({msg :'No se encontró el usuario'});
+        }
+        res.json(usuario);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send('Hubo un error');
+    }
+}
 exports.eliminarUsuario = async (req, res) => {
     try {
-
+        const usuario = await Usuario.findById(req.params.id);
+        if(!usuario){
+            res.status(404).json({msg :'No se encontró el usuario'});
+        }
+        await Usuario.findByIdAndRemove(req.params.id);
+        res.json({msg :'Usuario eliminado'});
     } catch (error) {
         console.log(error);
         res.status(500).send('Hubo un error');

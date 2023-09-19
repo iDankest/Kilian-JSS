@@ -17,8 +17,9 @@ conectarDB();
 app.use(cors());
 app.use(express.json());
 
+
 //Rutas
-// app.use('/api/usuarios', require('./routes/usuarios'));
+app.use('/api/usuarios', require('./Routers/usuarioRoute'));
 
 //Puerto
 app.listen(3700), () => console.log('Servidor corriendo en puerto 3700');
