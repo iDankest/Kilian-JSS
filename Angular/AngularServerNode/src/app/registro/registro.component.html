@@ -1,24 +1,38 @@
 <div class="Form">
-    <h2>Formulario de Registro</h2>
-    <form (ngSubmit)="submitFormA()">
-      
-        <mat-form-field appearance="fill">
-        <mat-label for="nombre">Nombre:</mat-label>
-        <input  matInput type="text" id="nombre" [(ngModel)]="nombreA" name="nombre" required></mat-form-field>
+  <h2>Formulario de Registro</h2>
+  <form [formGroup]="registroForm" (ngSubmit)="agregarRegistro()">
     
-          <mat-form-field appearance="fill">
-        <mat-label for="email">Email:</mat-label>
-        <input matInput placeholder="pat@ejemplo.com" type="email" id="email" [(ngModel)]="emailA" name="email" required>
-      </mat-form-field>
+      <mat-form-field appearance="fill">
+      <mat-label for="name">Nombre:</mat-label>
+      <input  matInput type="text" id="name" formControlName="name" name="name" required></mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label for="lastname">Apellidos:</mat-label>
+        <input  matInput type="text" id="lastname" formControlName="lastname" name="lastname" required></mat-form-field>
         <mat-form-field appearance="fill">
-        <mat-label for="contrasena">Contraseña:</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" id="contrasena" [(ngModel)]="contrasenaA" name="contrasena" required>
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-      </mat-form-field>
+      <mat-label for="email">Email:</mat-label>
+      <input matInput placeholder="pat@ejemplo.com" type="email" id="email" formControlName="email" name="email" required>
+    </mat-form-field>
+      <mat-form-field appearance="fill">
+      <mat-label for="contrasena">Contraseña:</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" id="contrasena" formControlName="password" name="contrasena" required>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label for="tipo">Tipo:</mat-label>
+      <input  matInput type="text" id="tipo" formControlName="tipo" name="tipo" required></mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label for="foto">Foto:</mat-label>
+        <input  matInput type="text" id="foto" formControlName="foto" name="foto" required></mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label for="Fnacimiento">Nacimiento:</mat-label>
+          <input  matInput type="text" id="Fnacimiento" formControlName="Fnacimiento" name="Fnacimiento" required></mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label for="telefono">Telefono:</mat-label>
+            <input  matInput type="text" id="telefono" formControlName="telefono" name="telefono" required></mat-form-field>
 
-      <button mat-button type="submit">Registrarse</button>
+    <button mat-button [disabled]="registroForm.invalid" type="submit">Registrarse</button>
 
-    </form>
-  </div>
+  </form>
+</div>
