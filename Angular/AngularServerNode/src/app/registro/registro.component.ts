@@ -48,7 +48,7 @@ export class RegistroComponent implements OnInit{
       foto: this.registroForm.get('foto')?.value,
     }
   
-    if (REGISTRO.name !== '' && REGISTRO.email !== '' && REGISTRO.password !== '') {
+    if (REGISTRO.name !== '' && REGISTRO.email !== '' && REGISTRO.password !== '' && REGISTRO.lastname !== '' && REGISTRO.telefono !== '' && REGISTRO.tipo !== '' && REGISTRO.Fnacimiento) {
       // Realizar acciones para guardar el registro en la base de datos
       this._UsuarioService.createUsuario(REGISTRO).subscribe(data => {
         this.toastr.success('El registro fue guardado con éxito!', 'Registro Guardado!');
