@@ -1,0 +1,22 @@
+<div class="header">
+    <ul class="float-end">
+        
+        <li><a routerLink="/">Inicio</a></li>
+        <li> <a mat-button [matMenuTriggerFor]="menu">Login</a></li>
+        <mat-menu #menu="matMenu">
+        <li mat-menu-item routerLink="/acceso">Acesso</li>
+        <li mat-menu-item routerLink="/registro">registro</li>
+        </mat-menu>
+        <li> <a mat-button [matMenuTriggerFor]="menu2">User</a></li>
+        <mat-menu #menu2="matMenu">
+        <li mat-menu-item routerLink="/alumnos">Alumnos</li>
+        </mat-menu>
+        <!-- <li><a routerLink="/tata">lol</a></li> -->
+        <li> <a mat-button [matMenuTriggerFor]="menu3">Cursos</a></li>
+        <mat-menu #menu3="matMenu">
+        <li mat-menu-item routerLink="/cursos">Crear Cursos</li>
+        <li mat-menu-item routerLink="/tata">Tareas</li>
+        </mat-menu>
+        <li><a routerLink="/contacto">Contacto</a></li>
+    </ul>
+</div>

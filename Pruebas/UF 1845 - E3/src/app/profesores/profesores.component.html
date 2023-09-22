@@ -1,0 +1,21 @@
+<mat-grid-list cols="2" rowHeight="2:2">
+  <mat-grid-tile><div class="example-listbox-container">
+      <label class="example-listbox-label" id="example-fav-color-label">
+        Profesores
+      </label>
+      <ul cdkListbox
+      aria-labelledby="example-fav-color-label"
+      class="example-listbox" 
+      (cdkSelectedChange)="cdkSelectedChange($event)">
+    <li class="example-option" *ngFor="let profesor of profesores" [cdkOption]="profesor._id">{{profesor.nameP}}</li>
+  </ul>
+  
+  
+    </div></mat-grid-tile>
+    <mat-grid-tile>
+      <div *ngIf="selectedProfesor">
+        <h2>{{ selectedProfesor.nameP }}</h2>
+        <p>Foto: <img [src]="selectedProfesor.imgP" alt="{{ selectedProfesor.nameP }}"/></p>
+      </div>
+    </mat-grid-tile>
+</mat-grid-list>

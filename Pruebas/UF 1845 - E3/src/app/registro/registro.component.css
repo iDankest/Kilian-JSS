@@ -1,0 +1,23 @@
+.Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* .Form h2{
+    display: block;
+    text-align: center;
+    margin-left: 10em;
+} */
+form mat-form-field{
+    width: 20em;
+}
+button{
+    width: 10em;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
