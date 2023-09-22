@@ -35,6 +35,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {CdkListboxModule} from '@angular/cdk/listbox';
 import {DialogModule} from '@angular/cdk/dialog';
+import { ListaRegistroComponent } from './lista-registro/lista-registro.component';
 
 
 
@@ -57,7 +58,8 @@ import {DialogModule} from '@angular/cdk/dialog';
     ListarCursoComponent,
     HeaderComponent,
     DashboardComponent,
-    TareasComponent
+    TareasComponent,
+    ListaRegistroComponent
   ],
   imports: [
     DialogModule,
