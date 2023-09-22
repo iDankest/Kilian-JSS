@@ -1,1 +1,28 @@
-<p>lista-registro works!</p>
+<div class="container mt5">
+    <div class="row">
+        <div class="w80">
+            <div class="card">
+                <div class="card-body">
+                    <span class="titulo">LISTADO DE Registros</span>
+                    <button class="btn btn-success float-end" routerLink="/crearRegistros">NUEVO</button>
+                    <table *ngIf="listRegistrad.length > 0" class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">contraseña</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let Registros of listRegistrad">
+                            <th scope="row">{{Registros.nick}}</th>
+                            <td>{{Registros.email}}</td>
+                            <td>{{Registros.pass}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

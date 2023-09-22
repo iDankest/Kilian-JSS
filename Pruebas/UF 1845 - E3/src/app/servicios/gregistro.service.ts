@@ -12,11 +12,11 @@ export class GRegistroService {
 
   constructor(private http: HttpClient) { }
 
-  getCursos(): Observable<any>{
+  getRegistros(): Observable<any>{
     return this.http.get(this.url)
   }
 
-  eliminarCurso(id: string): Observable<any> {
+  eliminarRegistro(id: string): Observable<any> {
     return this.http.delete(this.url + id);
   }
 

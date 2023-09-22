@@ -14,6 +14,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { CrearCursoComponent } from './crear-curso/crear-curso.component';
 import { ListarCursoComponent } from './listar-curso/listar-curso.component';
 import { TareasComponent } from './tareas/tareas.component';
+import { ListaRegistroComponent } from './lista-registro/lista-registro.component';
 import { HeaderComponent } from './header/header.component';
 import { AppComponent } from './app.component';
 
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path: 'editarCurso/:id', component: CrearCursoComponent},
   {path: 'listado', component: ListarCursoComponent},
   {path: 'tata', component: TareasComponent},
+  {path: 'listaRegistro', component: ListaRegistroComponent},
   
   {path: '**', redirectTo: '',pathMatch:'full'}
 ];
