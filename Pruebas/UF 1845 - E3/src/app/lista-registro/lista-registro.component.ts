@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { GRegistroService } from '../servicios/gregistro.service';
+import { Registrad } from '../Models/registro';
 
 @Component({
   selector: 'app-lista-registro',
