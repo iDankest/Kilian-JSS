@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { GRegistroService } from '../servicios/gregistro.service';
 import { Registrad } from '../Models/registro';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { Registrad } from '../Models/registro';
 export class ListaRegistroComponent implements OnInit{
   listRegistrad: Registrad[]=[];
 
-  constructor(private _registroService: GRegistroService){
+  constructor(private _registroService: GRegistroService, private toastr: ToastrService){
 
   }
   ngOnInit(): void {
@@ -25,4 +26,13 @@ export class ListaRegistroComponent implements OnInit{
       console.log(error);
     })
   }
+  eliminarRegistro(id: any) {
+    this._registroService.eliminarRegistro(id).subscribe(data => {
+      this.toastr.error('El registro fue eliminado con exito' ,'Registro Eliminado');
+      this.getRegistros();
+    }, error => {
+      console.log(error);
+    })
+  }
+
 }
