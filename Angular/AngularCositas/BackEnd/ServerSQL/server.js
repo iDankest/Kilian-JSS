@@ -19,9 +19,9 @@ app.use(express.json());
 
 
 //Rutas
-app.use('/api/usuario', require('./Routers/usuarioRoute'));
-app.use('/api/mensajes', require('./Routers/mensajeRoute'));
-app.use('/api/curso', require('./Routers/cursosRoute'));
+app.use('/api/usuario', require('./src/routes/usuarioRoute'));
+app.use('/api/mensajes', require('./src/routes/mensajeRoute'));
+app.use('/api/curso', require('./src/routes/cursosRoute'));
 
 //Puerto
 app.listen(3700), () => console.log('Servidor corriendo en puerto 3700');

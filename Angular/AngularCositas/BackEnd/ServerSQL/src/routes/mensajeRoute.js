@@ -1,7 +1,7 @@
 // Rutas para mensajes
 const express = require('express');
 const router = express.Router();
-const mensajeController = require('../Controllers/mensajeController');
+const mensajeController = require('../controllers/mensajeController');
 
 // api/cursos
 router.post('/', mensajeController.crearMensaje);

@@ -1,4 +1,4 @@
-const Tarea = require('../Models/tareasModel');
+const Tarea = require('../models/tareasModel');
 
 exports.crearTarea = async (req, res) => {
     try {

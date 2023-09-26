@@ -1,4 +1,4 @@
-const Curso = require('../Models/cursoModel');
+const Curso = require('../models/cursoModel');
 
 exports.crearCurso = async (req, res) => {
     try {
