@@ -1,15 +1,23 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import router  from './routes/CursoRoutes';
 import sequelize from './config/connectdb'
+
+//Routers
+import routerC  from './routes/CursoRoutes';
+import routerM from './routes/MensajeRoutes';
+import routerT from './routes/TareaRoutes';
+import routerU from './routes/UsuarioRoutes';
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(router);
+app.use(routerC);
+app.use(routerM);
+app.use(routerT);
+app.use(routerU);
 
 app.listen(PORT, () => console.log(`Api conectada por el puerto ${PORT}`));
 

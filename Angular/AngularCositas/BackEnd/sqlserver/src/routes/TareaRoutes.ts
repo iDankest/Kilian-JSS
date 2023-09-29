@@ -1,11 +1,11 @@
 import { Router } from 'express'
 import { deleteTarea, getTarea, getTareas, postTarea, updateTarea } from '../controllers/TareasController'
 
-const router = Router();
-router.get('/', getTareas);
-router.get('/:id', getTarea);
-router.delete('/:id', deleteTarea);
-router.post('/', postTarea);
-router.put('/:id', updateTarea);
+const routerT = Router();
+routerT.get('/tarea', getTareas);
+routerT.get('/tarea/:id', getTarea);
+routerT.delete('/tarea/:id', deleteTarea);
+routerT.post('/tarea', postTarea);
+routerT.put('/tarea/:id', updateTarea);
 
-export default router;
+export default routerT;

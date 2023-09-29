@@ -5,7 +5,7 @@ const Tareas = db.define('Tareas', {
     nombre: {
         type: DataTypes.STRING
     },
-    descripcion: {
+    descipcion: {
         type: DataTypes.STRING
     },
     puntuacion: {
@@ -14,7 +14,7 @@ const Tareas = db.define('Tareas', {
     estado: {
         type: DataTypes.STRING
     },
-    importancia: {
+    importacia: {
         type: DataTypes.STRING
     }
 },{
