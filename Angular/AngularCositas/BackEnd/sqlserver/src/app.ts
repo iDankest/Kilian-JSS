@@ -8,6 +8,7 @@ import routerC  from './routes/CursoRoutes';
 import routerM from './routes/MensajeRoutes';
 import routerT from './routes/TareaRoutes';
 import routerU from './routes/UsuarioRoutes';
+import routerA from './routes/AdminRoutes';
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -18,6 +19,7 @@ app.use(routerC);
 app.use(routerM);
 app.use(routerT);
 app.use(routerU);
+app.use(routerA)
 
 app.listen(PORT, () => console.log(`Api conectada por el puerto ${PORT}`));
 
