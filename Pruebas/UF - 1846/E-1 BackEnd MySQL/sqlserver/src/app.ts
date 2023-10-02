@@ -4,7 +4,7 @@ import cors from 'cors';
 import sequelize from './config/connectdb'
 
 //Routers
-import routerU from './routes/UsuarioRoutes';
+import routerA from './routes/ArchivoRoutes';
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use(routerU);
+app.use(routerA);
 
 app.listen(PORT, () => console.log(`Api conectada por el puerto ${PORT}`));
 
