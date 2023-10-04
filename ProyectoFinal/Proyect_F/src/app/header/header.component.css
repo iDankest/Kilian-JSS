@@ -1,0 +1,8 @@
+ul{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+li{
+    list-style: none;
+}
