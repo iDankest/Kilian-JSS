@@ -5,4 +5,10 @@ ul{
 }
 li{
     list-style: none;
+    transition: 0.7s;
+    
+}
+li:hover{
+    scale: 1.5;
+    font-weight: bold;
 }
