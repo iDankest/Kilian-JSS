@@ -1,7 +1,7 @@
 ul{
     display: flex;
     gap: 2em;
-    justify-content: center;
+    /* justify-content: center; */
 }
 li{
     list-style: none;
@@ -11,4 +11,29 @@ li{
 li:hover{
     scale: 1.5;
     font-weight: bold;
+    cursor: pointer;
 }
+header{
+    display: flex;
+    background-color: aqua;
+    align-items: center;
+    gap: 2em;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+svg{
+    /* display: flex; */
+    width: 2em;
+    height: 2em;
+    transition: 0.7s;
+
+}
+svg:hover{    
+    scale: 1.5;
+    /* font-weight: bold; */
+    cursor: pointer;
+}
+/* .seg{
+    padding-left: 500px;
+    margin-left: 500px;
+} */
