@@ -1,0 +1,24 @@
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: 0.4s;
+}
+ul{
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+header{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: #59359A    ;
+    color: #C5B3E6   ;
+    height: 8vh;
+}
+li:hover{
+    cursor: pointer;
+    scale: 1.2;
+    color: white;
+}
