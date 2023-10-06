@@ -16,6 +16,8 @@ header{
     background-color: #59359A    ;
     color: #C5B3E6   ;
     height: 8vh;
+    border-bottom-right-radius:20px;
+    border-bottom-left-radius:20px;
 }
 li:hover{
     cursor: pointer;
