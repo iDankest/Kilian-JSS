@@ -8,6 +8,12 @@
 }
 .main-card{
     text-align: center;
-    margin-left: 40em;
-    margin-right: 40em;
+    margin-left: 1.2em;
+    margin-right: 1.2em;
 }
+@media (min-width: 992px) {
+    .main-card { 
+        margin-left: 40em;
+        margin-right: 40em;
+     }
+  }
