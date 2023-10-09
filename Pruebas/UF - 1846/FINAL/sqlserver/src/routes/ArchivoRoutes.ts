@@ -1,7 +1,11 @@
 import { Router } from "express";
-import {getArchivo} from "../controllers/ArchivoController"
+import { getFile } from "../controllers/storage";
+import multerMiddleware from "../middleware/file";
+// import  validateToken  from '../routes/validate-token'
+import { checkJwt } from "../middleware/session";
 
-const routerA = Router();
-routerA.get('/archivo/:id', getArchivo);
-routerA.post('/archivo', getArchivo);
-export default routerA;
+const routerFile = Router();
+
+routerFile.post("/", multerMiddleware.single("myfile"), getFile);
+
+export { routerFile };

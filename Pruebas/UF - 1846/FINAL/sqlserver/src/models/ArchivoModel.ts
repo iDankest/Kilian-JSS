@@ -1,19 +1,26 @@
-import { DataTypes } from "sequelize"; 
-import db from "../config/connectdb";
+import { DataTypes } from 'sequelize'
+import sequelize from '../config/connectdb';
 
-const Archivo = db.define("archivo", {
-    iduser:{
-        type: DataTypes.INTEGER,
+const Archivo = sequelize.define('archivo',
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
     },
     filename: {
-        type: DataTypes.STRING,
+      type: DataTypes.STRING
+    },
+    iduser: {
+      type: DataTypes.STRING
     },
     filepath: {
-        type: DataTypes.STRING,
-    }
-}, {
-    createdAt: false,
-    updatedAt: false
-});
+      type: DataTypes.STRING
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
 export default Archivo;
