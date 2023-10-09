@@ -1,0 +1,19 @@
+.card{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    background-color: #fff;
+    text-align: start;
+
+}
+.main-card{
+    text-align: center;
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+}
+@media (min-width: 992px) {
+    .main-card { 
+        margin-left: 40em;
+        margin-right: 40em;
+     }
+  }
