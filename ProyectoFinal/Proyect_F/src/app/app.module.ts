@@ -4,15 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AccederComponent } from './Component/acceder/acceder.component';
-import { ContactoComponent } from './Component/contacto/contacto.component';
 import { HomeComponent } from './Component/home/home.component';
+import { AgregarArchivoComponent } from './Component/agregar-archivo/agregar-archivo.component';
+import { HttpClientModule } from '@angular/common/http';
 
-//Materials
-import {MatIconModule} from '@angular/material/icon';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,15 +19,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     FooterComponent,
     AccederComponent,
-    ContactoComponent,
     HomeComponent,
+    AgregarArchivoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatIconModule,
-    NgbModule
-    
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,12 @@
-.footer{
+footer{
     display: flex;
+    justify-items: center;
     justify-content: center;
-    background-color: aqua;
-    border-radius: 5px;
-    height: 5vh;
+    height: 8vh;
+    color: #C5B3E6;
+    background-color: #59359A;
+}
+p{
+    display: flex;
+    align-items: center;
 }

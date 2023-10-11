@@ -42,7 +42,7 @@ class Server {
         try {
            
             await User.sync();
-            await Archivo.sync()
+            await Archivo.sync();
         } catch (error) {
             console.error('Unable to connect to the database:', error);
         }
