@@ -11,6 +11,7 @@ import { AccederComponent } from './Component/acceder/acceder.component';
 import { HomeComponent } from './Component/home/home.component';
 import { AgregarArchivoComponent } from './Component/agregar-archivo/agregar-archivo.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
