@@ -1,14 +1,10 @@
 <div class="main-card">
 <h1>Nuevos cursos</h1>
-<div class="tarjeta-contenido">
+<div class="tarjeta-contenido" >
+<div *ngFor="let curso of cursos">
+<img src="{{curso.imagen}}" alt="">
+</div> 
     
-    <img mat-raised-button color="primary" (click)="openDialog()" src="../../../assets/media/css.png" alt="">
-
-    
-    <img src="../../../assets/media/1687300553_c_html.png" alt="">
-
-
-    <img src="../../../assets/media/CURSO-JAVASCRIPT-GRATIS-FACIALIX.jpg" alt="">
 
 </div>
 </div>
