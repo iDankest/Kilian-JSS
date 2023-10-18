@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'subir', component:AgregarArchivoComponent},
   {path: 'registro',component:RegistroComponent},
   {path: 'contacto',component:ContactoComponent},
-  {path: 'configuracion',component:ConfiguracionComponent}
+  {path: 'confi',component:ConfiguracionComponent}
 
 ];
 
