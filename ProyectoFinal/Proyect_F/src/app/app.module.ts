@@ -12,6 +12,10 @@ import { HomeComponent } from './Component/home/home.component';
 import { AgregarArchivoComponent } from './Component/agregar-archivo/agregar-archivo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
+import { PerfilComponent } from './Component/perfil/perfil.component';
+import { CursosComponent } from './Component/cursos/cursos.component';
+import { CrearCursoComponent } from './Component/crear-curso/crear-curso.component';
+import { ConfiguracionComponent } from './Component/configuracion/configuracion.component';
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { MatDialogModule } from '@angular/material/dialog';
     FooterComponent,
     AccederComponent,
     HomeComponent,
-    AgregarArchivoComponent
+    AgregarArchivoComponent,
+    PerfilComponent,
+    CursosComponent,
+    CrearCursoComponent,
+    ConfiguracionComponent
   ],
   imports: [
     BrowserModule,
