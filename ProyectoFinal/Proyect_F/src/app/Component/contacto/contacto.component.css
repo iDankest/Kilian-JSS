@@ -10,15 +10,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     background-color: #F8F9FA;
     border-radius: 10px;
+    gap: 1em;
 }
 .main-form form label{
     font-size: 1.2rem;
     font-weight: 600;
     display: flex;
-    width: 125px;
+    width: 200px;
+
 }
 .main-form form input{
     padding: 10px;
