@@ -6,7 +6,7 @@ import { AgregarArchivoComponent } from './Component/agregar-archivo/agregar-arc
 import { RegistroComponent } from './Component/registro/registro.component';
 import { ContactoComponent } from './Component/contacto/contacto.component';
 import { ConfiguracionComponent } from './Component/configuracion/configuracion.component';
-
+import { CrearCursoComponent } from './Component/crear-curso/crear-curso.component';
 
 const routes: Routes = [
   { path: '', component:HomeComponent },
@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: 'subir', component:AgregarArchivoComponent},
   {path: 'registro',component:RegistroComponent},
   {path: 'contacto',component:ContactoComponent},
-  {path: 'confi',component:ConfiguracionComponent}
+  {path: 'confi',component:ConfiguracionComponent},
+  {path: 'crear',component:CrearCursoComponent},
 
 ];
 

@@ -1,0 +1,20 @@
+.contendor-grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.form-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 5fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 20px;
+    background-color: #F8F9FA;
+    border-radius: 10px;
+
+}
+.form-grid label[for='nombre']{
+    grid-column: 1/4;
+}
