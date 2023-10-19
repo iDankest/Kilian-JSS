@@ -1,0 +1,46 @@
+.dividelo{
+    display: flex;
+    gap: 1em;
+}
+.info-usu{
+    width: 30vw;
+    height: 60vh;
+    border-right: solid black 1px;
+}
+
+.contenedor-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+@media screen and (max-width: 425px){
+.info-usu{
+    display: none;
+}
+}
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+    width: 70vw;
+
+}
+
+.ejem{
+    width: 200px;
+    height: 50px;
+    background-color: #F8F9FA;
+}
+.revisar{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* gap: 1em; */
+    /* border: solid black 1px; */
+}
+i{  
+    width: 100px;
+    height: 50px;
+    border: solid black 1px;
+}
