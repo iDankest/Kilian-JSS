@@ -8,13 +8,50 @@
 .form-grid{
     display: grid;
     grid-template-columns: repeat(4, 5fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 4px;
+    height: 60vh;
     padding: 20px;
     background-color: #F8F9FA;
     border-radius: 10px;
 
 }
 .form-grid label[for='nombre']{
-    grid-column: 1/4;
+    grid-column: 1/1;
+}
+.form-grid input[name='nombre']{
+    grid-column: 2/5;
+}
+.form-grid input[name='descri']{
+    grid-column: 2/5;
+    grid-row: span 2;
+}
+.form-grid input[name='temas']{
+    grid-column: 2/5;
+    grid-row: span 2;
+}
+.form-grid label[for='descri']{
+
+    grid-row: span 2;
+}
+.form-grid label[for='temas']{
+
+    grid-row: span 2;
+}
+.form-grid input[type='submit']{
+    grid-column: 1/5;
+    padding: 0;
+}
+.form-grid input[type='submit']:hover{
+    background-color: #3F51B5;
+    color: white;
+    cursor: pointer;
+}
+.form-grid input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #D1D5DB;
+}
+.form-grid input:focus{
+    outline: none;
+    border: 1px solid #3F51B5;
 }
