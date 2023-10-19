@@ -19,4 +19,4 @@ const UserModel = db.define('usuarios',{
     createdAt: false,
     updatedAt: false
 });
- export {UserModel};
+export default UserModel;
