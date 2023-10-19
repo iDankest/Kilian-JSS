@@ -16,6 +16,7 @@ import { PerfilComponent } from './Component/perfil/perfil.component';
 import { CursosComponent } from './Component/cursos/cursos.component';
 import { CrearCursoComponent } from './Component/crear-curso/crear-curso.component';
 import { ConfiguracionComponent } from './Component/configuracion/configuracion.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { ConfiguracionComponent } from './Component/configuracion/configuracion.
     HomeComponent,
     AgregarArchivoComponent,
     PerfilComponent,
-    CursosComponent,
+    // CursosComponent,
     CrearCursoComponent,
     ConfiguracionComponent
   ],

@@ -7,6 +7,7 @@ import { RegistroComponent } from './Component/registro/registro.component';
 import { ContactoComponent } from './Component/contacto/contacto.component';
 import { ConfiguracionComponent } from './Component/configuracion/configuracion.component';
 import { CrearCursoComponent } from './Component/crear-curso/crear-curso.component';
+import { CursosComponent } from './Component/cursos/cursos.component';
 
 const routes: Routes = [
   { path: '', component:HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'contacto',component:ContactoComponent},
   {path: 'confi',component:ConfiguracionComponent},
   {path: 'crear',component:CrearCursoComponent},
+  {path: 'cursos',component:CursosComponent},
 
 ];
 
