@@ -17,6 +17,7 @@ import { CursosComponent } from './Component/cursos/cursos.component';
 import { CrearCursoComponent } from './Component/crear-curso/crear-curso.component';
 import { ConfiguracionComponent } from './Component/configuracion/configuracion.component';
 import {MatCardModule} from '@angular/material/card';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -37,7 +38,9 @@ import {MatCardModule} from '@angular/material/card';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
