@@ -30,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AgregarArchivoComponent,
     PerfilComponent,
-    // CursosComponent,
+    CursosComponent,
     CrearCursoComponent,
     ConfiguracionComponent
   ],

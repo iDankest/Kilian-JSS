@@ -1,0 +1,19 @@
+<div class="main-form">
+    <h2>Contacto</h2>
+    <p>Para cualquier duda o consulta, por favor llene estos campos</p>
+    <form action="" formGroup="contactoForm" (ngSubmit)="agregarUsuario()">
+        <i>
+        <label for="nombre">Nombre:</label>
+        <input type="text" formControlName="nombre" id="nombre" name="nombre" placeholder="Nombre"></i>
+       <i> <label for="email">Email:</label>
+        <input type="email" formControlName="email" id="email" name="email" placeholder="Email"></i>
+        <i><label for="asunto" id="asunto" name="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" formControlName="asunto" placeholder="Asunto"></i>
+        <i><label for="mensaje">Mensaje:</label>
+        <textarea formControlName="textomensaje" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea></i>
+        <i class="end"> <label for=""></label><button type="submit" [disabled]="contactoForm.invalid">Enviar</button></i>
+    </form>
+</div>
+
+
+

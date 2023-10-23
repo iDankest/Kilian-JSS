@@ -1,0 +1,18 @@
+.tarjeta-contenido{
+    display: flex;
+    justify-content: space-around;
+}
+.tarjeta-contenido img{
+    width:80%;
+    border-radius: 10px;
+
+
+}
+.main-card{
+text-align: center;
+}
+
+.tarjeta-contenido img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
