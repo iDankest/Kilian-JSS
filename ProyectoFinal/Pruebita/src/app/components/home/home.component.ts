@@ -21,5 +21,3 @@ export class HomeComponent {
 //  }
 
 }
- // new GCurso( 'HTML', 'Aprender fundamentos', 30, '../../../assets/media/html.png'),
-    // new GCurso('CSS', 'Aprender fundamentos', 90, '../../../assets/media/css.png'),
