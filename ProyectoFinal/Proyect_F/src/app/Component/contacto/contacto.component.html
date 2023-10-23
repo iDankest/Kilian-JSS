@@ -1,7 +1,7 @@
 <div class="main-form">
     <h2>Contacto</h2>
     <p>Para cualquier duda o consulta, por favor llene estos campos</p>
-    <form action="" [formGroup]="contactoForm" (ngSubmit)="agregarUsuario()">
+    <form action="" formGroup="contactoForm" (ngSubmit)="agregarUsuario()">
         <i>
         <label for="nombre">Nombre:</label>
         <input type="text" formControlName="nombre" id="nombre" name="nombre" placeholder="Nombre"></i>
