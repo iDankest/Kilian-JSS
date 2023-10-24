@@ -42,7 +42,7 @@ titulo = 'Crear curso';
       nombre: this.cursoForm.get('nombre')?.value,
       descripcion: this.cursoForm.get('descripcion')?.value,
       categoria: this.cursoForm.get('categoria')?.value,
-      imagen: this.cursoForm.get('imagen')?.value,
+      // imagen: this.cursoForm.get('imagen')?.value,
       duracion: this.cursoForm.get('duracion')?.value,
       temas: this.cursoForm.get('temas')?.value
     }

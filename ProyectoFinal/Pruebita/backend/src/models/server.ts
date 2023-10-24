@@ -4,7 +4,8 @@ import routesUser from '../routes/user';
 import { routerFile } from '../routes/storage'
 import { User } from './user';
 import  Archivo  from './storage'
-
+import routerC from '../routes/curso'
+import GCurso from './curso';
 
 class Server {
     private app: Application;
@@ -28,6 +29,7 @@ class Server {
     routes() {
         this.app.use('/api/users', routesUser);
         this.app.use('/api/upload', routerFile)
+        this.app.use('/api/curso', routerC)
     }
 
     midlewares() {
@@ -42,7 +44,8 @@ class Server {
         try {
            
             await User.sync();
-            await Archivo.sync()
+            await Archivo.sync();
+            await GCurso.sync();
         } catch (error) {
             console.error('Unable to connect to the database:', error);
         }

@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'archivos', component: AgregarArchivoComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'home', component: HomeComponent },
-  { path: '**', redirectTo: 'login', pathMatch: 'full' }
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
