@@ -25,7 +25,7 @@ titulo = 'Crear curso';
       nombre: ['', Validators.required],
       descripcion: ['', Validators.required],
       categoria: ['', Validators.required],
-      imagen: [''],
+      // imagen: [''],
       duracion: ['', Validators.required],
       temas: ['', Validators.required]
     })
@@ -77,7 +77,7 @@ titulo = 'Crear curso';
           nombre: data.nombre,
           descripcion: data.descripcion,
           categoria: data.categoria,
-          imagen: data.imagen,
+          // imagen: data.imagen,
           duracion: data.duracion,
           temas: data.temas
         })

@@ -14,6 +14,6 @@ export class GCurso{
 		// this.imagen = imagen
         this.duracion = duracion;
         this.temas = temas;
-		this.fechaCreacion = fechaCreacion;
+		// this.fechaCreacion = fechaCreacion;
     }
 }
