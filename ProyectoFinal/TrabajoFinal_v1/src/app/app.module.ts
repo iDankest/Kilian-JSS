@@ -20,6 +20,9 @@ import { AddTokenInterceptor } from './utils/add-token.interceptor';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { CrearCursoComponent } from './components/crear-curso/crear-curso.component';
 import { ListarCursoComponent } from './components/listar-curso/listar-curso.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { ListarCursoComponent } from './components/listar-curso/listar-curso.com
     SpinnerComponent,
     ContactoComponent,
     CrearCursoComponent,
-    ListarCursoComponent
+    ListarCursoComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

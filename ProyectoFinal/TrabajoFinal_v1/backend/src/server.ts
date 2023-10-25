@@ -59,6 +59,7 @@ class Server {
             await Post.sync()
             await Tarea.sync()
             await Archivo.sync()
+            console.log('Base de datos conectada correctamente')
         } catch (error) {
             console.error('Unable to connect to the database:', error);
         }

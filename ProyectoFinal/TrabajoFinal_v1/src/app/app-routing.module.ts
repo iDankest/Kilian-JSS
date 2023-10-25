@@ -5,7 +5,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 // Componentes
 import { LoginComponent } from './components/login/login.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
-
+import { HomeComponent } from './components/home/home.component';
 // Guards
 import { AuthGuard } from './utils/auth.guard';
 import { ContactoComponent } from './components/contacto/contacto.component';
@@ -14,7 +14,7 @@ import { CrearCursoComponent } from './components/crear-curso/crear-curso.compon
 import { ListarCursoComponent } from './components/listar-curso/listar-curso.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'signIn', component: SignInComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'archivo', component: AgregarArchivoComponent, canActivate: [AuthGuard] },
   { path: 'crearCurso', component: CrearCursoComponent, canActivate: [AuthGuard] },
   {path: 'editarCurso/:id', component: CrearCursoComponent},
-  {path: 'listado', component: ListarCursoComponent}
+  {path: 'listado', component: ListarCursoComponent},
+  {path: 'home', component: HomeComponent}
   // { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];
 

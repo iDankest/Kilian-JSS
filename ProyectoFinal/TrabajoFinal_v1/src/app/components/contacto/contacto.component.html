@@ -1,3 +1,36 @@
+
+<div class="main-form">
+    <h2>Contacto</h2>
+    <p>Para cualquier duda o consulta, por favor llene estos campos</p>
+    <form  novalidate (ngSubmit)="agregarMensaje()" [formGroup]= "contactoForm">
+        <i>
+        <label for="nombre">Nombre:</label>
+        <input type="text" formControlName="nombre" id="nombre" placeholder="Nombre" class="form-control"></i>
+        <!-- <div class="text-danger" *ngIf="contactoForm.get('nombre')?.hasError('required') && contactoForm.get('nombre')?.touched">
+            <span>El nombre es obligatorio</span>
+        </div> -->
+       <i> <label for="email">Email:</label>
+        <input type="email" formControlName="email" id="email" name="email" placeholder="Email" class="form-control"></i>
+        <!-- <div class="text-danger" *ngIf="contactoForm.get('email')?.hasError('required') && contactoForm.get('email')?.touched">
+            <span>El email es obligatorio</span>
+        </div> -->
+        <i><label for="asunto" id="asunto" name="asunto">Asunto:</label>
+        <input type="text" id="asunto" formControlName="asunto" placeholder="Asunto" class="form-control"></i>
+        <!-- <div class="text-danger" *ngIf="contactoForm.get('asunto')?.hasError('required') && contactoForm.get('asunto')?.touched">
+            <span>El asunto es obligatorio</span>
+        </div>  -->
+        <i><label for="mensaje">Mensaje:</label>
+        <textarea formControlName="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje" class="form-control"></textarea></i>
+        <!-- <div class="text-danger" *ngIf="contactoForm.get('mensaje')?.hasError('required') && contactoForm.get('mensaje')?.touched">
+            <span>El mensaje es obligatorio</span>
+        </div> -->
+        <i class="end"> <label for=""></label><button type="submit" [disabled]="contactoForm.invalid">Enviar</button></i>
+    </form>
+</div>
+
+
+<!-- 
+
 <div class="container mt-15">
     <div class="row">
         <div class="col-lg-12">
@@ -19,9 +52,9 @@
                         </div>
                         <div class="mb-3">
                             <input type="text" formControlName="asunto" class="form-control" placeholder="Asunto">
-                            <div class="text-danger" *ngIf="contactoForm.get('asunto')?.hasError('required') && contactoForm.get('asunto')?.touched">
+                           <div class="text-danger" *ngIf="contactoForm.get('asunto')?.hasError('required') && contactoForm.get('asunto')?.touched">
                                 <span>El asunto es obligatorio</span>
-                            </div>
+                            </div> 
                         </div>
                         <div class="mb-3">
                             <textarea type="text" formControlName="mensaje" class="form-control" placeholder="Mensaje" cols="50" rows="10"></textarea>
@@ -38,6 +71,4 @@
             </div>
         </div>
     </div>
-  </div>
-
-
+  </div> -->
