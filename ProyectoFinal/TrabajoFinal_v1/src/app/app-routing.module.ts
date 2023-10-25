@@ -6,6 +6,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { HomeComponent } from './components/home/home.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
 // Guards
 import { AuthGuard } from './utils/auth.guard';
 import { ContactoComponent } from './components/contacto/contacto.component';
@@ -20,9 +22,11 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'contacto', component: ContactoComponent, canActivate: [AuthGuard] },
   { path: 'archivo', component: AgregarArchivoComponent, canActivate: [AuthGuard] },
-  { path: 'crearCurso', component: CrearCursoComponent, canActivate: [AuthGuard] },
+  { path: 'crearCurso', component: CrearCursoComponent},
   {path: 'editarCurso/:id', component: CrearCursoComponent},
   {path: 'listado', component: ListarCursoComponent},
+  {path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard]},
+  {path: 'configuracion', component: ConfiguracionComponent, canActivate: [AuthGuard]},
   {path: 'home', component: HomeComponent}
   // { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];

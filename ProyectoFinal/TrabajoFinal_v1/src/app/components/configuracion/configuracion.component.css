@@ -1,0 +1,100 @@
+.dividelo{
+    display: flex;
+    gap: 1em;
+}
+.info-usu{
+    width: 30vw;
+    height: 60vh;
+    border-right: solid black 1px;
+}
+.dividelo form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #F8F9FA;
+    border-radius: 10px;
+    gap: 1em;
+    margin-left: 2em;
+}
+.dividelo form input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #D1D5DB;
+    width: 200px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.dividelo form input[type="submit"]{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 0;
+
+}
+.dividelo form input[type="submit"]:hover{
+    background-color: #0062cc;
+}
+.dividelo form input[type="radio"]{
+    height: 16px;
+}
+.dividelo form input[type="file"]{
+    border: none;
+    height: auto;
+    width: 170px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.dividelo form label{
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 200px;
+
+}
+.contenedorformulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 60vh;
+}
+@media screen and (max-width: 768px){
+.contenedorformulario{
+    width: 70vw;
+    }
+    
+}
+@media screen and (max-width: 425px){
+.info-usu{
+    display: none;
+}
+.contenedorformulario{
+    width: 100vw;
+    }
+.dividelo form{
+    width: 260px;
+    margin-left: 0;
+
+}
+    
+}
+@media screen and (width: 1024px){
+
+.contenedorformulario{
+    width: 100vw;
+    }
+.dividelo form{
+    margin-left: 0;
+
+}
+    
+} 
