@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-import {MatDialogModule} from '@angular/material/dialog';
+// import {MatDialogModule} from '@angular/material/dialog';
 
 // Componentes
 import { LoginComponent } from './components/login/login.component';
@@ -25,6 +25,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { DialogModule } from '@angular/cdk/dialog';
+import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { DialogModule } from '@angular/cdk/dialog';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    DialogModule,
+    // MatDialogModule,
     ReactiveFormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot({

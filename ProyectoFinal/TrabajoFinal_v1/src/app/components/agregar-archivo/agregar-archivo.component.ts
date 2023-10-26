@@ -1,20 +1,27 @@
 import { RestService } from '../../services/rest.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-agregar-archivo',
   templateUrl: './agregar-archivo.component.html',
-  styleUrls: ['./agregar-archivo.component.css']
+  styleUrls: ['./agregar-archivo.component.css'],
+  standalone: true,
+  imports: [MatDialogModule, MatButtonModule],
 })
 export class AgregarArchivoComponent implements OnInit{
   
   public archivos: any = []
   public loading: boolean | undefined
 
-  constructor(private rest: RestService) { }
+  constructor(private rest: RestService,public dialogRef: MatDialogRef<AgregarArchivoComponent>) { }
 
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
   ngOnInit(): void {
   }
   capturarFile(event: any) {

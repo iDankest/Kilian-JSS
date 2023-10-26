@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize'
 import sequelize from '../db/connection';
 
-const Archivo = sequelize.define('archivo',
+const Archivo = sequelize.define('archivos',
   {
     id: {
       type: DataTypes.INTEGER,

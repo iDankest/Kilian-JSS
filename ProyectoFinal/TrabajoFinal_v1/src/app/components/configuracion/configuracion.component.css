@@ -46,7 +46,7 @@
 .dividelo form input[type="radio"]{
     height: 16px;
 }
-.dividelo form input[type="file"]{
+.dividelo form input[type="button"]{
     border: none;
     height: auto;
     width: 170px;

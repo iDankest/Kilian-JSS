@@ -1,16 +1,25 @@
 <!--- DEFINIER COMPONENTE DE FILE-->
-<div class="wrapper">
-  <div class="position-relative">
-      <h3>Subir imagen</h3>
-      <input class="input-file" (change)="capturarFile($event)" type="file">
+
+
+
+
+
+<!-- modal.html -->
+<div class="modal">
+    <div class="modal-content">
+        <input class="input-file" (change)="capturarFile($event)" type="file">
         
-      <div class="wrapper-button" >
-          <button type="button" class="button" [disabled]="loading" (click)="subirArchivo()">
-              {{(loading) ? 'Cargando.....' : 'Subir Archivo'}}
-          </button>
-      </div>
-
-  </div>
- 
-</div>
-
+        <div class="wrapper-button" >
+            <button type="button" class="button" [disabled]="loading" (click)="subirArchivo()">
+                {{(loading) ? 'Cargando.....' : 'Subir Archivo'}}
+            </button>
+        </div>
+      <button mat-button (click)="onNoClick()">Cerrar</button>
+    </div>
+   </div>
+<!-- 
+   <h1 mat-dialog-title>Subir iamgen</h1>
+<div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div> -->
