@@ -4,6 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-agregar-archivo',
@@ -17,7 +18,7 @@ export class AgregarArchivoComponent implements OnInit{
   public archivos: any = []
   public loading: boolean | undefined
 
-  constructor(private rest: RestService,public dialogRef: MatDialogRef<AgregarArchivoComponent>) { }
+  constructor(private rest: RestService,public dialogRef: MatDialogRef<AgregarArchivoComponent>, private msg: ToastrService) { }
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -42,6 +43,7 @@ export class AgregarArchivoComponent implements OnInit{
         .subscribe(res => {
           this.loading = false;
           console.log('Respuesta del servidor', res);
+          this.msg.success('Archivo subido correctamente', 'Archivo subido');
         }, () => {
           this.loading = false;
           alert('Error');
