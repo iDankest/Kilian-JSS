@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signIn', component: SignInComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'contacto', component: ContactoComponent, canActivate: [AuthGuard] },
+  { path: 'contacto', component: ContactoComponent},
   { path: 'archivo', component: AgregarArchivoComponent, canActivate: [AuthGuard] },
   { path: 'crearCurso', component: CrearCursoComponent},
   {path: 'editarCurso/:id', component: CrearCursoComponent},

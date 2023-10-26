@@ -1,6 +1,13 @@
 <header>
-    <ul>
-        <li routerLink="/login">Acceder</li>
-        <li routerLink="/contacto">Contacto</li>
+    <ul>    
+        <ng-container *ngIf="!isLoggedIn()">
+            <li routerLink="/login">Acceder</li>
+            <li routerLink="/contacto">Contacto</li>
+        </ng-container>
+        <ng-container *ngIf="isLoggedIn()">
+            <li routerLink="/perfil">Perfil</li>
+            <li routerLink="/configuracion">Configuración</li>
+            <li (click)="logout()">Cerrar</li>
+        </ng-container>
     </ul>
 </header>
