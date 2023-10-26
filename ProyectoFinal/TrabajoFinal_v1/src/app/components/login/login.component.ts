@@ -5,6 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/interfaces/user';
 import { ErrorService } from 'src/app/services/error.service';
 import { UserService } from 'src/app/services/user.service';
+import { AuthService } from 'src/app/services/Auten.service';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +20,7 @@ export class LoginComponent implements OnInit {
   constructor(private toastr: ToastrService,
     private _userService: UserService,
     private router: Router,
+    private _authService: AuthService,
     private _errorService: ErrorService) { }
 
   ngOnInit(): void {
@@ -42,7 +44,8 @@ export class LoginComponent implements OnInit {
     this._userService.login(user).subscribe({
       next: (token) => {
         localStorage.setItem('token', token);
-        this.router.navigate(['/dashboard'])
+        this.router.navigate(['/perfil']);
+        return this._authService.isLoggedIn = true;
       },
       error: (e: HttpErrorResponse) => {
         this._errorService.msjError(e);

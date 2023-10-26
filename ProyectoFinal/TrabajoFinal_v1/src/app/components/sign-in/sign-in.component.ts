@@ -5,6 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/interfaces/user';
 import { ErrorService } from 'src/app/services/error.service';
 import { UserService } from 'src/app/services/user.service';
+import { AuthService } from 'src/app/services/Auten.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -20,6 +21,7 @@ export class SignInComponent implements OnInit {
   constructor(private toastr: ToastrService,
     private _userService: UserService,
     private router: Router,
+    private _authService: AuthService,
     private _errorService: ErrorService) { }
 
   ngOnInit(): void {
@@ -50,7 +52,9 @@ export class SignInComponent implements OnInit {
       next: (v) => {
         this.loading = false;
         this.toastr.success(`El usuario ${this.email} fue registrado con exito`, 'Usuario registrado');
-        this.router.navigate(['/login']);
+        this.router.navigate(['/configuracion']);
+        return this._authService.isLoggedIn = true;
+
       },
       error: (e: HttpErrorResponse) => {
         this.loading = false;
