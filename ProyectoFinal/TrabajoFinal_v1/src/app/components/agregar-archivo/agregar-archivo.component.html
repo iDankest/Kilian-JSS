@@ -11,8 +11,9 @@
         
         <div class="wrapper-button" >
             <button type="button" class="button" [disabled]="loading" (click)="subirArchivo()">
-                {{(loading) ? 'Cargando.....' : 'Subir Archivo'}}
+              {{(loading) ? 'Cargando.....' : 'Subir Archivo'}}
             </button>
+           
         </div>
       <button mat-button (click)="onNoClick()">Cerrar</button>
     </div>

@@ -17,6 +17,7 @@ export class AgregarArchivoComponent implements OnInit{
   
   public archivos: any = []
   public loading: boolean | undefined
+  public cap: boolean = false
 
   constructor(private rest: RestService,public dialogRef: MatDialogRef<AgregarArchivoComponent>, private msg: ToastrService) { }
 
@@ -28,6 +29,7 @@ export class AgregarArchivoComponent implements OnInit{
   capturarFile(event: any) {
     const archivoCapturado = event.target.files[0]  
     this.archivos.push(archivoCapturado)
+    this.cap = true
   }
    
   // Subir archivo
@@ -35,6 +37,7 @@ export class AgregarArchivoComponent implements OnInit{
   subirArchivo(): any {
     try {
       this.loading = true;
+      this.cap = true
       const formularioDeDatos = new FormData();
       this.archivos.forEach((archivo: string) => {
         formularioDeDatos.append('myfile', archivo)
